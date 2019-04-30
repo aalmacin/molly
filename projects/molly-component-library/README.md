@@ -1,24 +1,42 @@
-# MollyComponentLibrary
+# Molly Component Library
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+## How to use the Component Library
 
-## Code scaffolding
+Install the npm package
 
-Run `ng generate component component-name --project molly-component-library` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project molly-component-library`.
-> Note: Don't forget to add `--project molly-component-library` or else it will be added to the default project in your `angular.json` file. 
+```sh
+npm i 'molly-component-library'
+```
 
-## Build
+## Add the module as a dependency
 
-Run `ng build molly-component-library` to build the project. The build artifacts will be stored in the `dist/` directory.
+Example `app.module.ts`
+```ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-## Publishing
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { MollyComponentLibraryModule } from 'molly-component-library';
 
-After building your library with `ng build molly-component-library`, go to the dist folder `cd dist/molly-component-library` and run `npm publish`.
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    MollyComponentLibraryModule,
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
-## Running unit tests
+## Use the components
 
-Run `ng test molly-component-library` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Example: `app.component.html`
+```html
+<rd-flash-card topic="Philosophy" front="What is the meaning of life?" back="42"></rd-flash-card>
+```
