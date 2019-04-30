@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "molly-component-library": [
+        "dist/molly-component-library"
+      ],
+      "molly-component-library/*": [
+        "dist/molly-component-library/*"
+      ]
+    }
   }
 }

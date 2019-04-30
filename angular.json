@@ -127,6 +127,41 @@
           }
         }
       }
+    },
+    "molly-component-library": {
+      "root": "projects/molly-component-library",
+      "sourceRoot": "projects/molly-component-library/src",
+      "projectType": "library",
+      "prefix": "mol",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/molly-component-library/tsconfig.lib.json",
+            "project": "projects/molly-component-library/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/molly-component-library/src/test.ts",
+            "tsConfig": "projects/molly-component-library/tsconfig.spec.json",
+            "karmaConfig": "projects/molly-component-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/molly-component-library/tsconfig.lib.json",
+              "projects/molly-component-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "molly"

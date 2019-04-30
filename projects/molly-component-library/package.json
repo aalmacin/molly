@@ -1,0 +1,11 @@
+{
+  "name": "molly-component-library",
+  "version": "0.0.2",
+  "author": "Aldrin Jerome Almacin",
+  "description": "Molly is an Angular component library",
+  "license": "ISC",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  }
+}

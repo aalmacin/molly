@@ -1,0 +1,18 @@
+@import "./space/margin.scss";
+@import "./space/padding.scss";
+@import "./color/color.scss";
+
+@import "./tokens.scss";
+
+@include generatePaddingClasses($tokensConfig);
+@include generateMarginClasses($tokensConfig);
+
+@include generateBackgroundColorClasses($tokensConfig);
+
+@mixin testItWorks() {
+  .rd-something {
+    color: #FFFFFF;
+  }
+}
+
+@include testItWorks();
