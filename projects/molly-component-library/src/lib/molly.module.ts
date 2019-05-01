@@ -9,4 +9,4 @@ import { CardModule } from './card/card.module';
   imports: [FlashCardModule, CardModule],
   exports: [FlashCardComponent, CardComponent]
 })
-export class MollyComponentLibraryModule { }
+export class MollyModule { }

@@ -38,5 +38,5 @@ export class AppModule { }
 
 Example: `app.component.html`
 ```html
-<rd-flash-card topic="Philosophy" front="What is the meaning of life?" back="42"></rd-flash-card>
+<mol-flash-card topic="Philosophy" front="What is the meaning of life?" back="42"></mol-flash-card>
 ```

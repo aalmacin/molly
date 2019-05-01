@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "cl:build": "ng build molly-component-library",
+    "cl:build:watch": "ng build molly-component-library --watch",
     "cl:build:publish": "ng build molly-component-library && npm publish dist/molly-component-library",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",

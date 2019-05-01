@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'rd-card',
+  selector: 'mol-card',
   template: `
-    <div class="heading rd-w-vs rd-bc-green">
+    <div class="heading mol-w-vs mol-bc-green">
       {{ heading }}
     </div>
-    <div class="content rd-w-vs">
+    <div class="content mol-w-vs">
       {{ content }}
     </div>
   `,

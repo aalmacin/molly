@@ -33,3 +33,10 @@ stories.add('Palette', () => ({
   }
 }));
 
+
+stories.add('Borders', () => ({
+  component: GlobalComponent,
+  props: {
+    showBorders: boolean('showBorders', true)
+  }
+}));

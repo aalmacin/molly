@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'rd-global',
+  selector: 'mol-global',
   template: `
     <div *ngIf="showMargin">
       <h1>Margin</h1>
@@ -32,6 +32,13 @@ import { Component, Input } from '@angular/core';
         <div class="{{ color }} color">X {{ color }}</div>
       </div>
     </div>
+
+    <div *ngIf="showBorders">
+      <h1>Borders</h1>
+      <div *ngFor="let border of borders" class="borders">
+        <div class="mol-m-t-vl mol-p-lg {{ border }} border">X {{ border }}</div>
+      </div>
+    </div>
   `,
   styleUrls: ['./global.component.scss']
 })
@@ -45,121 +52,130 @@ export class GlobalComponent {
   @Input()
   showPalette = false;
 
+  @Input()
+  showBorders = false;
+
   margins = [
-    'rd-m-l-vs',
-    'rd-m-l-sm',
-    'rd-m-l-md',
-    'rd-m-l-lg',
-    'rd-m-l-vl',
+    'mol-m-l-vs',
+    'mol-m-l-sm',
+    'mol-m-l-md',
+    'mol-m-l-lg',
+    'mol-m-l-vl',
 
-    'rd-m-r-vs',
-    'rd-m-r-sm',
-    'rd-m-r-md',
-    'rd-m-r-lg',
-    'rd-m-r-vl',
+    'mol-m-r-vs',
+    'mol-m-r-sm',
+    'mol-m-r-md',
+    'mol-m-r-lg',
+    'mol-m-r-vl',
 
-    'rd-m-x-vs',
-    'rd-m-x-sm',
-    'rd-m-x-md',
-    'rd-m-x-lg',
-    'rd-m-x-vl',
+    'mol-m-x-vs',
+    'mol-m-x-sm',
+    'mol-m-x-md',
+    'mol-m-x-lg',
+    'mol-m-x-vl',
 
-    'rd-m-t-vs',
-    'rd-m-t-sm',
-    'rd-m-t-md',
-    'rd-m-t-lg',
-    'rd-m-t-vl',
+    'mol-m-t-vs',
+    'mol-m-t-sm',
+    'mol-m-t-md',
+    'mol-m-t-lg',
+    'mol-m-t-vl',
 
-    'rd-m-b-vs',
-    'rd-m-b-sm',
-    'rd-m-b-md',
-    'rd-m-b-lg',
-    'rd-m-b-vl',
+    'mol-m-b-vs',
+    'mol-m-b-sm',
+    'mol-m-b-md',
+    'mol-m-b-lg',
+    'mol-m-b-vl',
 
-    'rd-m-y-vs',
-    'rd-m-y-sm',
-    'rd-m-y-md',
-    'rd-m-y-lg',
-    'rd-m-y-vl',
+    'mol-m-y-vs',
+    'mol-m-y-sm',
+    'mol-m-y-md',
+    'mol-m-y-lg',
+    'mol-m-y-vl',
 
-    'rd-m-a-vs',
-    'rd-m-a-sm',
-    'rd-m-a-md',
-    'rd-m-a-lg',
-    'rd-m-a-vl'
+    'mol-m-a-vs',
+    'mol-m-a-sm',
+    'mol-m-a-md',
+    'mol-m-a-lg',
+    'mol-m-a-vl'
   ];
 
   paddings = [
-    'rd-p-l-vs',
-    'rd-p-l-sm',
-    'rd-p-l-md',
-    'rd-p-l-lg',
-    'rd-p-l-vl',
+    'mol-p-l-vs',
+    'mol-p-l-sm',
+    'mol-p-l-md',
+    'mol-p-l-lg',
+    'mol-p-l-vl',
 
-    'rd-p-r-vs',
-    'rd-p-r-sm',
-    'rd-p-r-md',
-    'rd-p-r-lg',
-    'rd-p-r-vl',
+    'mol-p-r-vs',
+    'mol-p-r-sm',
+    'mol-p-r-md',
+    'mol-p-r-lg',
+    'mol-p-r-vl',
 
-    'rd-p-x-vs',
-    'rd-p-x-sm',
-    'rd-p-x-md',
-    'rd-p-x-lg',
-    'rd-p-x-vl',
+    'mol-p-x-vs',
+    'mol-p-x-sm',
+    'mol-p-x-md',
+    'mol-p-x-lg',
+    'mol-p-x-vl',
 
-    'rd-p-t-vs',
-    'rd-p-t-sm',
-    'rd-p-t-md',
-    'rd-p-t-lg',
-    'rd-p-t-vl',
+    'mol-p-t-vs',
+    'mol-p-t-sm',
+    'mol-p-t-md',
+    'mol-p-t-lg',
+    'mol-p-t-vl',
 
-    'rd-p-b-vs',
-    'rd-p-b-sm',
-    'rd-p-b-md',
-    'rd-p-b-lg',
-    'rd-p-b-vl',
+    'mol-p-b-vs',
+    'mol-p-b-sm',
+    'mol-p-b-md',
+    'mol-p-b-lg',
+    'mol-p-b-vl',
 
-    'rd-p-y-vs',
-    'rd-p-y-sm',
-    'rd-p-y-md',
-    'rd-p-y-lg',
-    'rd-p-y-vl',
+    'mol-p-y-vs',
+    'mol-p-y-sm',
+    'mol-p-y-md',
+    'mol-p-y-lg',
+    'mol-p-y-vl',
 
-    'rd-p-a-vs',
-    'rd-p-a-sm',
-    'rd-p-a-md',
-    'rd-p-a-lg',
-    'rd-p-a-vl'
+    'mol-p-a-vs',
+    'mol-p-a-sm',
+    'mol-p-a-md',
+    'mol-p-a-lg',
+    'mol-p-a-vl'
   ];
 
   colors = [
-    'rd-bc-red-vlight',
-    'rd-bc-red-light',
-    'rd-bc-red-base',
-    'rd-bc-red-dark',
-    'rd-bc-red-vdark',
+    'mol-bc-red-vlight',
+    'mol-bc-red-light',
+    'mol-bc-red-base',
+    'mol-bc-red-dark',
+    'mol-bc-red-vdark',
 
-    'rd-bc-green-vlight',
-    'rd-bc-green-light',
-    'rd-bc-green-base',
-    'rd-bc-green-dark',
-    'rd-bc-green-vdark',
+    'mol-bc-green-vlight',
+    'mol-bc-green-light',
+    'mol-bc-green-base',
+    'mol-bc-green-dark',
+    'mol-bc-green-vdark',
 
-    'rd-bc-blue-vlight',
-    'rd-bc-blue-light',
-    'rd-bc-blue-base',
-    'rd-bc-blue-dark',
-    'rd-bc-blue-vdark',
+    'mol-bc-blue-vlight',
+    'mol-bc-blue-light',
+    'mol-bc-blue-base',
+    'mol-bc-blue-dark',
+    'mol-bc-blue-vdark',
 
-    'rd-bc-gray-vlight',
-    'rd-bc-gray-light',
-    'rd-bc-gray-base',
-    'rd-bc-gray-dark',
-    'rd-bc-gray-vdark',
+    'mol-bc-gray-vlight',
+    'mol-bc-gray-light',
+    'mol-bc-gray-base',
+    'mol-bc-gray-dark',
+    'mol-bc-gray-vdark',
 
-    'rd-bc-black-base',
+    'mol-bc-black-base',
 
-    'rd-bc-white-base'
+    'mol-bc-white-base'
   ];
+
+  borders = [
+    'mol-b-black',
+    'mol-b-thick-black',
+    'mol-b-vthick-black'
+  ]
 }

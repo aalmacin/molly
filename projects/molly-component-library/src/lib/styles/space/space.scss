@@ -15,7 +15,7 @@
   }
 }
 
-@function _generateSpaceCssClass($type, $directionValue) {
+@function _generateSpaceCssRule($type, $directionValue) {
   @return "#{$type}-#{$directionValue}";
 }
 
@@ -29,13 +29,13 @@
         @each $singleDirection, $singleDirectionValue in $directionValue {
           @include _generateClass(
             _generateSpaceClassName($prefix, $space, $direction),
-            _generateSpaceCssClass($type, $singleDirectionValue),
+            _generateSpaceCssRule($type, $singleDirectionValue),
             $spaceValue)
         }
       } @else {
           @include _generateClass(
             _generateSpaceClassName($prefix, $space, $direction),
-            _generateSpaceCssClass($type, $directionValue),
+            _generateSpaceCssRule($type, $directionValue),
             $spaceValue)
       }
 

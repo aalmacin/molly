@@ -1,16 +1,16 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'rd-flash-card',
+  selector: 'mol-flash-card',
   template: `
-    <div id="flash-card-heading" class="rd-bc-gray-vlight p-lg">
+    <div id="flash-card-heading" class="mol-b-black mol-bc-gray-vlight p-lg">
       {{ topic }}
     </div>
 
-    <div *ngIf="!flipped" id="rd-flash-card-front" class="rd-bc-green-light p-lg" (click)="flip()">
+    <div *ngIf="!flipped" id="mol-flash-card-front" class="mol-bc-green-light p-lg" (click)="flip()">
       {{ front }}
     </div>
-    <div *ngIf="flipped" id="rd-flash-card-back" class="rd-bc-green-vlight p-lg">
+    <div *ngIf="flipped" id="mol-flash-card-back" class="mol-bc-green-vlight p-lg">
       {{ back }}
     </div>
   `,

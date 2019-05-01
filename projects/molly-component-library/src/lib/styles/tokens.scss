@@ -1,5 +1,5 @@
 $base: 1rem;
-$base-tevt: 1rem;
+$base-text: 1rem;
 
 $spaceMap: (
   vs: calc(0.25 * #{$base}),
@@ -7,6 +7,12 @@ $spaceMap: (
   md: #{$base},
   lg: calc(1.25 * #{$base}),
   vl: calc(1.5 * #{$base})
+);
+
+$thicknessMap: (
+  normal: 1px,
+  thick: 2px,
+  vthick: 3px,
 );
 
 $paletteMap: (
@@ -48,5 +54,6 @@ $paletteMap: (
 
 $tokensConfig: (
   paletteMap: $paletteMap,
-  spaceMap: $spaceMap
+  spaceMap: $spaceMap,
+  thicknessMap: $thicknessMap
 );

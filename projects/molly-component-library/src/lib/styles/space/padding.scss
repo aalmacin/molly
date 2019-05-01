@@ -3,5 +3,5 @@
 
 @mixin generatePaddingClasses($tokensConfig) {
   @include generateSpaceClasses('p', 'padding', $tokensConfig);
-  @include generateSpaceClasses('rd-p', 'padding', $tokensConfig);
+  @include generateSpaceClasses('mol-p', 'padding', $tokensConfig);
 }
