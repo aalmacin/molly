@@ -31,3 +31,8 @@
   @include generateColorClasses('bc', 'background-color', $tokensConfig);
   @include generateColorClasses('rd-bc', 'background-color', $tokensConfig);
 }
+
+@mixin generateFontColorClasses($tokensConfig) {
+  @include generateColorClasses('c', 'color', $tokensConfig);
+  @include generateColorClasses('rd-c', 'color', $tokensConfig);
+}

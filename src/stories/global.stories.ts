@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/angular';
-import { GlobalComponent } from './global.component';
+import { GlobalComponent } from '../app/global/global.component';
 import { boolean } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Raidrin|Global', module);

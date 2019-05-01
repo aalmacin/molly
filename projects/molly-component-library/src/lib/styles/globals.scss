@@ -8,6 +8,7 @@
 @include generateMarginClasses($tokensConfig);
 
 @include generateBackgroundColorClasses($tokensConfig);
+@include generateFontColorClasses($tokensConfig);
 
 @mixin testItWorks() {
   .rd-something {
