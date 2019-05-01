@@ -1,9 +1,10 @@
 {
   "name": "molly-component-library",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Aldrin Jerome Almacin",
   "description": "Molly is an Angular component library",
   "license": "ISC",
+  "keywords": ["angular", "component", "library", "molly", "reusable", "css"],
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
