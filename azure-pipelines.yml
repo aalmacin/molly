@@ -19,13 +19,8 @@ steps:
     npm install
     npm run cl:build
   displayName: 'Build artifacts'
-  
-- task: UniversalPackages@0
+
+- task: PublishPipelineArtifact@0
   inputs:
-    command: 'publish'
-    feedsToUse: 'internal'
-    publishDirectory: '$(Build.ArtifactStagingDirectory)'
-    feedsToUsePublish: 'internal'
-    vstsFeedPublish: 'molly'
-    vstsFeedPackagePublish: 'component-library'
-    versionOption: 'patch'
+    artifactName: 'molly'
+    targetPath: 'dist/molly-component-library'
