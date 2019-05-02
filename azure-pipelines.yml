@@ -5,7 +5,7 @@
 
 trigger:
 - master
-- *
+- lastWorkingBuild
 
 pool:
   vmImage: 'ubuntu-latest'
