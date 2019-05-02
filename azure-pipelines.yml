@@ -22,7 +22,7 @@ steps:
 
 - task: PublishPipelineArtifact@0
   inputs:
-    artifactName: 'molly'
+    artifactName: 'cl'
     targetPath: 'dist/molly-component-library'
   displayName: 'Store dist artifacts'
 
