@@ -16,20 +16,23 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run cl:build
+- script: npm install
+  displayName: 'Install npm dependencies'
+
+- script: npm run cl:build
   displayName: 'Build artifacts'
 
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'molly'
     targetPath: 'dist/molly-component-library'
+  displayName: 'Publish dist artifact'
 
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'npmrc'
     targetPath: '.npmrc'
+  displayName: 'Publish npmrc artifact'
 
 - task: PublishPipelineArtifact@0
   inputs:
