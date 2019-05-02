@@ -15,22 +15,19 @@ steps:
     versionSpec: '8.11.4'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-  displayName: 'Install dependencies'
+- script: npm install
+  displayName: 'Install npm dependencies'
 
-- script: |
-    npm run cl:build
+- script: npm run cl:build
   displayName: 'Build artifacts'
 
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'cl'
     targetPath: 'dist/molly-component-library'
-  displayName: 'Store dist artifacts'
+  displayName: 'Publish dist artifact'
 
 - task: PublishPipelineArtifact@0
   inputs:
-    artifactName: 'molly-npmrc'
-    targetPath: '.npmrc'
-  displayName: 'Store npmrc artifacts'
+    artifactName: 'npmrc'
+    targetPath: 'azure.npmrc'
