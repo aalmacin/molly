@@ -37,4 +37,4 @@ steps:
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'molly-npmrc'
-    targetPath: '.npmrc'
+    targetPath: 'azure.npmrc'
