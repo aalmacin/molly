@@ -17,6 +17,9 @@ steps:
 
 - script: |
     npm install
+  displayName: 'Install dependencies'
+
+- script: |
     npm run cl:build
   displayName: 'Build artifacts'
 
