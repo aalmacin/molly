@@ -142,11 +142,11 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@nrwl/builders:jest",
           "options": {
-            "main": "projects/molly-component-library/src/test.ts",
+            "jestConfig": "projects/molly-component-library/jest.config.js",
             "tsConfig": "projects/molly-component-library/tsconfig.spec.json",
-            "karmaConfig": "projects/molly-component-library/karma.conf.js"
+            "setupFile": "projects/molly-component-library/src/test-setup.ts"
           }
         },
         "lint": {
