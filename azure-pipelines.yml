@@ -26,14 +26,8 @@ steps:
     targetPath: 'dist/molly-component-library'
   displayName: 'Store dist artifacts'
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: 'cp .npmrc npmrc'
-  displayName: 'Copy npmrc'
-
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'molly-npmrc'
-    targetPath: 'npmrc'
+    targetPath: '.npmrc'
   displayName: 'Store npmrc artifacts'
