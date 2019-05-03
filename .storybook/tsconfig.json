@@ -1,7 +1,12 @@
 {
   "extends": "../src/tsconfig.app.json",
   "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "resolveJsonModule": true,
     "types": [
+      "jest",
       "node"
     ]
   },
