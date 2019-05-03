@@ -46,4 +46,4 @@ testem.log
 Thumbs.db
 test/
 __snapshots__
-jest-output.json
+jest-test-results.json
