@@ -1,5 +1,19 @@
+import { FlashCardComponent } from "./flash-card.component";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MollyModule } from '../molly.module';
+
 describe('FlashCardComponent', () => { 
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [
+        FlashCardComponent
+      ],
+      providers: [],
+    }).compileComponents();
+  }));
+
   it('works', () => {
-    expect(true).toEqual(true);
+    const fixture = TestBed.createComponent(FlashCardComponent);
+    expect(fixture).toMatchSnapshot();
   })
 })

@@ -7,10 +7,11 @@ import { Component, Input } from '@angular/core';
       {{ topic }}
     </div>
 
-    <div *ngIf="!flipped" id="mol-flash-card-front" class="mol-bc-green-light p-lg" (click)="flip()">
+    <div *ngIf="!flipped" id="mol-flash-card-front" class="mol-b-gray-dark mol-bc-green-light p-lg" (click)="flip()">
       {{ front }}
     </div>
-    <div *ngIf="flipped" id="mol-flash-card-back" class="mol-bc-green-vlight p-lg">
+
+    <div *ngIf="flipped" id="mol-flash-card-back" class="mol-b-gray-dark mol-bc-green-vlight p-lg">
       {{ back }}
     </div>
   `,

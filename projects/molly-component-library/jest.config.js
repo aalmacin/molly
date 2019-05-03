@@ -2,7 +2,7 @@
 // // https://karma-runner.github.io/1.0/config/configuration-file.html
 
 module.exports = {
-
+  preset: "jest-preset-angular"
 };
 
 //module.exports = function (config) {
