@@ -33,12 +33,14 @@
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
+    "@angular-builders/jest": "^7.4.2",
     "@angular-devkit/build-angular": "~0.13.0",
     "@angular-devkit/build-ng-packagr": "~0.13.0",
     "@angular/cli": "~7.3.8",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
     "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
     "@nrwl/builders": "^7.8.3",
     "@storybook/addon-a11y": "^5.0.11",
     "@storybook/addon-actions": "^5.0.11",
@@ -54,6 +56,7 @@
     "@types/node": "~8.9.4",
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
+    "babel-plugin-require-context-hook": "^1.0.0",
     "enzyme": "^3.9.0",
     "jest": "^24.7.1",
     "jest-preset-angular": "^7.1.0",

@@ -98,12 +98,8 @@
           }
         },
         "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "jest.config.js",
-            "tsConfig": ".storybook/tsconfig.json",
-            "setupFile": "src/test-setup.ts"
-          }
+          "builder": "@angular-builders/jest:run",
+          "options": {}
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -133,12 +129,8 @@
           }
         },
         "test": {
-          "builder": "@nrwl/builders:jest",
-          "options": {
-            "jestConfig": "projects/molly-component-library/jest.config.js",
-            "tsConfig": "projects/molly-component-library/tsconfig.spec.json",
-            "setupFile": "projects/molly-component-library/src/test-setup.ts"
-          }
+          "builder": "@angular-builders/jest:run",
+          "options": {}
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
