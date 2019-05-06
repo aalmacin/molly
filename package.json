@@ -10,7 +10,7 @@
     "cl:build:publish": "ng build molly-component-library && npm publish dist/molly-component-library",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test:g-out": "ng test --json --outputFile=jest-test-results.json || true",
+    "test:g-out": "ng test --json --outputFile=jest-test-results.json --watch",
     "test:update-snapshot": "ng test --updateSnapshots",
     "test": "ng test",
     "lint": "ng lint",

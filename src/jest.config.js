@@ -1,10 +1,10 @@
 module.exports = {
   preset: 'jest-preset-angular',
-  globals: {
-    '__TRANSFORM_HTML__': true
-  },
+  // globals: {
+  //   '__TRANSFORM_HTML__': true
+  // },
   transform: {
-    '^.+\\.jsx?$': 'babel-jest',
+    '^.+\\.js$': 'babel-jest',
     // '^.+\\.(ts|html)$': '<rootDir>/node_modules/jest-preset-angular/preprocessor.js'
   },
   moduleFileExtensions: [

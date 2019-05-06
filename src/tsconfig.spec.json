@@ -1,0 +1,23 @@
+{
+  "extends": "../src/tsconfig.app.json",
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "commonjs",
+    "lib": ["es5", "es6", "es7", "es2017", "dom"],
+    "resolveJsonModule": true,
+    "types": [
+      "jest",
+      "node"
+    ]
+  },
+  "exclude": [
+    "../src/test.ts",
+    "../src/**/*.spec.ts",
+    "../projects/**/*.spec.ts"
+  ],
+  "include": [
+    "../src/**/*",
+    "../projects/**/*"
+  ]
+}
+
