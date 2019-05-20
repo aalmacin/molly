@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'mol-flash-card',
@@ -7,11 +8,11 @@ import { Component, Input } from '@angular/core';
       {{ topic }}
     </div>
 
-    <div *ngIf="!flipped" id="mol-flash-card-front" class="mol-b-gray-dark mol-bc-green-light p-lg" (click)="flip()">
+    <div *ngIf="!(flipped$ | async)" id="mol-flash-card-front" class="mol-b-gray-dark mol-bc-green-light p-lg" (click)="flip()">
       {{ front }}
     </div>
 
-    <div *ngIf="flipped" id="mol-flash-card-back" class="mol-b-gray-dark mol-bc-green-vlight p-lg">
+    <div *ngIf="(flipped$ | async)" id="mol-flash-card-back" class="mol-b-gray-dark mol-bc-green-vlight p-lg">
       {{ back }}
     </div>
   `,
@@ -27,9 +28,16 @@ export class FlashCardComponent {
   @Input()
   back = '';
 
-  flipped = false;
+  @Output()
+  flipped = new BehaviorSubject<boolean>(false);
+
+  flipped$: Observable<boolean>;
+
+  constructor() {
+    this.flipped$ = this.flipped.asObservable();
+  }
 
   flip() {
-    this.flipped = !this.flipped;
+    this.flipped.next(true);
   }
 }
