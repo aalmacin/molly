@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MollyModule } from 'molly-component-library';
+import { MolFlashCardModule } from 'projects/molly-component-library/src/public-api';
 
 @NgModule({
   declarations: [
@@ -10,7 +10,7 @@ import { MollyModule } from 'molly-component-library';
   ],
   imports: [
     BrowserModule,
-    MollyModule
+    MolFlashCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

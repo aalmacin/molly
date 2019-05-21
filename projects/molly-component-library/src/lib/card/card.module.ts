@@ -3,8 +3,7 @@ import { CardComponent } from './card.component';
 
 @NgModule({
   declarations: [CardComponent],
-  imports: [
-  ],
+  imports: [],
   exports: [CardComponent]
 })
-export class CardModule { }
+export class MolCardModule { }

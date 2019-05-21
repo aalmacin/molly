@@ -1,9 +1,6 @@
 .mol-flash-card {
   display: flex;
-  align-content: center;
+  flex-direction: column;
+  justify-content: center;
   flex-wrap: wrap;
-
-  .mol-flash-card-container {
-    flex-basis: 50%;
-  }
 }

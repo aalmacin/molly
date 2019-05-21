@@ -5,22 +5,15 @@ import { BehaviorSubject, Observable } from "rxjs";
   selector: "mol-flash-card",
   template: `
     <div class="mol-flash-card mol-tc mol-fd">
-      <div class="mol-flash-card-container">
-        <div
-          id="mol-flash-card-heading"
-          class="mol-b-green mol-bc-green-light mol-c-black mol-p-sm mol-fh"
-        >
-          {{ topic }}
-        </div>
+      <mol-card
+        heading="{{ topic }}"
+        content="{{ (flipped$ | async) ? back : front }}"
+        class="mol-flash-card-container"
+      ></mol-card>
 
-        <div
-          id="mol-flash-card-content"
-          class="mol-b-green mol-bc-green-vlight p-lg"
-          (click)="flip()"
-        >
-          {{ (flipped$ | async) ? back : front }}
-        </div>
-      </div>
+      <button class="mol-m-t-sm mol-p-sm mol-b-black mol-flash-card-show-answer mol-c-black" (click)="flip()">
+        Show Answer
+      </button>
     </div>
   `,
   styleUrls: ["./flash-card.component.scss"]

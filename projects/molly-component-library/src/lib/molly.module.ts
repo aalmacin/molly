@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { FlashCardComponent } from './flash-card/flash-card.component';
 import { CardComponent } from './card/card.component';
-import { FlashCardModule } from './flash-card/flash-card.module';
-import { CardModule } from './card/card.module';
+import { MolFlashCardModule } from './flash-card/flash-card.module';
+import { MolCardModule } from './card/card.module';
 
 @NgModule({
   declarations: [],
-  imports: [FlashCardModule, CardModule],
+  imports: [MolCardModule, MolFlashCardModule],
   exports: [FlashCardComponent, CardComponent]
 })
 export class MollyModule { }
