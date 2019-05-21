@@ -1,32 +1,39 @@
-import { Component, Input, Output } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Component, Input, Output } from "@angular/core";
+import { BehaviorSubject, Observable } from "rxjs";
 
 @Component({
-  selector: 'mol-flash-card',
+  selector: "mol-flash-card",
   template: `
-    <div id="flash-card-heading" class="mol-b-black mol-bc-gray-vlight p-lg">
-      {{ topic }}
-    </div>
+    <div class="mol-flash-card mol-tc mol-fd">
+      <div class="mol-flash-card-container">
+        <div
+          id="mol-flash-card-heading"
+          class="mol-b-green mol-bc-green-light mol-c-black mol-p-sm mol-fh"
+        >
+          {{ topic }}
+        </div>
 
-    <div *ngIf="!(flipped$ | async)" id="mol-flash-card-front" class="mol-b-gray-dark mol-bc-green-light p-lg" (click)="flip()">
-      {{ front }}
-    </div>
-
-    <div *ngIf="(flipped$ | async)" id="mol-flash-card-back" class="mol-b-gray-dark mol-bc-green-vlight p-lg">
-      {{ back }}
+        <div
+          id="mol-flash-card-content"
+          class="mol-b-green mol-bc-green-vlight p-lg"
+          (click)="flip()"
+        >
+          {{ (flipped$ | async) ? back : front }}
+        </div>
+      </div>
     </div>
   `,
-  styleUrls: ['./flash-card.component.scss']
+  styleUrls: ["./flash-card.component.scss"]
 })
 export class FlashCardComponent {
   @Input()
-  topic = '';
+  topic = "";
 
   @Input()
-  front = '';
+  front = "";
 
   @Input()
-  back = '';
+  back = "";
 
   @Output()
   flipped = new BehaviorSubject<boolean>(false);
