@@ -1,13 +1,13 @@
 import { storiesOf, moduleMetadata } from "@storybook/angular";
 import { FlashCardComponent } from "../../projects/molly-component-library/src/lib/flash-card/flash-card.component";
 import { text } from "@storybook/addon-knobs";
-import { MolCardModule } from "projects/molly-component-library/src/public-api";
+import { MolCardModule, MolButtonModule } from "projects/molly-component-library/src/public-api";
 
 const stories = storiesOf("Raidrin|FlashCard", module);
 
 stories.addDecorator(
   moduleMetadata({
-    imports: [MolCardModule]
+    imports: [MolButtonModule, MolCardModule]
   })
 );
 

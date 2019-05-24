@@ -9,3 +9,6 @@ export * from './lib/card/card.module';
 
 export * from './lib/flash-card/flash-card.module';
 export * from './lib/flash-card/flash-card.component';
+
+export * from './lib/button/button.module';
+export * from './lib/button/button.component';

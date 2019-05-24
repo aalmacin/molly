@@ -11,9 +11,7 @@ import { BehaviorSubject, Observable } from "rxjs";
         class="mol-flash-card-container"
       ></mol-card>
 
-      <button class="mol-m-t-sm mol-p-sm mol-b-black mol-flash-card-show-answer mol-c-black" (click)="flip()">
-        Show Answer
-      </button>
+      <mol-btn class="mol-flash-card-show-answer" text="Show Answer" (click)="flip()"></mol-btn>
     </div>
   `,
   styleUrls: ["./flash-card.component.scss"]
