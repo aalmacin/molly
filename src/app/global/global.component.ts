@@ -144,33 +144,27 @@ export class GlobalComponent {
   ];
 
   colors = [
-    'mol-bc-red-vlight',
-    'mol-bc-red-light',
-    'mol-bc-red-base',
-    'mol-bc-red-dark',
-    'mol-bc-red-vdark',
+    'mol-bc-primary-vlight',
+    'mol-bc-primary-light',
+    'mol-bc-primary',
+    'mol-bc-primary-dark',
+    'mol-bc-primary-vdark',
 
-    'mol-bc-green-vlight',
-    'mol-bc-green-light',
-    'mol-bc-green-base',
-    'mol-bc-green-dark',
-    'mol-bc-green-vdark',
+    'mol-bc-secondary-vlight',
+    'mol-bc-secondary-light',
+    'mol-bc-secondary',
+    'mol-bc-secondary-dark',
+    'mol-bc-secondary-vdark',
 
-    'mol-bc-blue-vlight',
-    'mol-bc-blue-light',
-    'mol-bc-blue-base',
-    'mol-bc-blue-dark',
-    'mol-bc-blue-vdark',
+    'mol-bc-tertiary-vlight',
+    'mol-bc-tertiary-light',
+    'mol-bc-tertiary',
+    'mol-bc-tertiary-dark',
+    'mol-bc-tertiary-vdark',
 
-    'mol-bc-gray-vlight',
-    'mol-bc-gray-light',
-    'mol-bc-gray-base',
-    'mol-bc-gray-dark',
-    'mol-bc-gray-vdark',
+    'mol-bc-black',
 
-    'mol-bc-black-base',
-
-    'mol-bc-white-base'
+    'mol-bc-white'
   ];
 
   borders = [

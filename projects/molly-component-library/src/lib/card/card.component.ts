@@ -4,10 +4,10 @@ import { Component, Input } from "@angular/core";
   selector: "mol-card",
   template: `
     <div class="mol-card">
-      <div class="mol-b-green mol-bc-green-light mol-c-black mol-p-sm mol-fh">
+      <div class="mol-b-primary-light-x mol-b-primary-light-t mol-bc-primary-light mol-c-white mol-tc mol-p-sm mol-fh">
         {{ heading }}
       </div>
-      <div class="mol-b-green mol-bc-green-vlight p-lg">
+      <div class="mol-b-primary-light-x mol-b-primary-light-b mol-bc-white mol-tc p-lg">
         {{ content }}
       </div>
     </div>

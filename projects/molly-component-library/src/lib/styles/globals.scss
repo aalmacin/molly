@@ -15,3 +15,5 @@
 @include generateFontColorClasses($tokensConfig);
 
 @include generateBorderClasses($tokensConfig);
+
+@include generateFontClasses($tokensConfig);

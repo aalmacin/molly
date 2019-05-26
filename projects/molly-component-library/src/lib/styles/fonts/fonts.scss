@@ -1,18 +1,34 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Questrial|Roboto+Slab:100,300,400,700&display=swap');
 
 @mixin header-font {
-  font-family: 'Merriweather', serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 @mixin text-font {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Questrial', sans-serif;
+}
+
+@mixin generateFontClasses($tokensConfig) {
+  $fontSizeMap: map-get($tokensConfig, 'fontSizeMap');
+
+  @each $fontSize, $fontSizeValue in $fontSizeMap {
+    .mol-fs-#{$fontSize} {
+      font-size: #{$fontSizeValue};
+    }
+  }
 }
 
 .mol-fd {
   * {
     @include text-font();
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @include header-font();
   }
 }
