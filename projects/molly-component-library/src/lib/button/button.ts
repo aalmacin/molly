@@ -4,3 +4,9 @@ export enum ButtonType {
   TERTIARY = 'tertiary',
   DEFAULT = 'default'
 };
+
+export enum ButtonSize {
+  SMALL = 'small',
+  MEDIUM = 'medium',
+  LARGE = 'large',
+}

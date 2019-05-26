@@ -20,6 +20,7 @@ import { BehaviorSubject, Observable } from "rxjs";
         class="mol-flash-card-show-answer"
         text="Show Answer"
         type="primary"
+        size="medium"
         (click)="flip()"
       ></mol-btn>
     </div>
