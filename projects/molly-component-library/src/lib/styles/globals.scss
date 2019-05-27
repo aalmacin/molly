@@ -6,6 +6,8 @@
 @import "./text/text.scss";
 @import "./border/border.scss";
 
+@import "./list/list.scss";
+
 @import "./tokens.scss";
 
 @include generatePaddingClasses($tokensConfig);

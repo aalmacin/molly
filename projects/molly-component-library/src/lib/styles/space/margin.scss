@@ -4,4 +4,8 @@
 @mixin generateMarginClasses($tokensConfig) {
   @include generateSpaceClasses('m', 'margin', $tokensConfig);
   @include generateSpaceClasses('mol-m', 'margin', $tokensConfig);
+
+  .mol-m-n {
+    margin: 0;
+  }
 }
