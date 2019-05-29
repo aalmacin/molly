@@ -28,7 +28,7 @@ export class NavItemComponent implements OnInit {
 
   setDefaultBorder() {
     if (this.active) {
-      this.borderClasses = "mol-b-tertiary-vdark-b";
+      this.borderClasses = "active";
     } else {
       this.borderClasses = "mol-b-secondary-vlight-b";
     }

@@ -7,3 +7,7 @@
   color: inherit;
   text-decoration: inherit;
 }
+
+:host ::ng-deep .active {
+  border-bottom: 1px solid #35281c;
+}
