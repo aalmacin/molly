@@ -30,12 +30,12 @@ export class NavItemComponent implements OnInit {
     if (this.active) {
       this.borderClasses = "active";
     } else {
-      this.borderClasses = "mol-b-secondary-vlight-b";
+      this.borderClasses = "inactive";
     }
   }
 
   hoverNavItem() {
-    this.borderClasses = "mol-b-secondary-dark-b";
+    this.borderClasses = "hover";
   }
 
   unhoverNavItem() {

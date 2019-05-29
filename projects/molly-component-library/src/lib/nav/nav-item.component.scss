@@ -8,6 +8,23 @@
   text-decoration: inherit;
 }
 
-:host ::ng-deep .active {
-  border-bottom: 1px solid #35281c;
+:host ::ng-deep {
+  .active a, a.active {
+    border-bottom: 1px solid #35281c;
+    padding-bottom: calc(0.5 * 1rem);
+
+    &.hover {
+      border-bottom: 1px solid #cce8ea;
+    }
+  }
+
+  .inactive a {
+    border-bottom: 1px solid #cce8ea;
+    padding-bottom: calc(0.5 * 1rem);
+  }
+
+  .hover a {
+    border-bottom: 1px solid #6492a0;
+    padding-bottom: calc(0.5 * 1rem);
+  }
 }
