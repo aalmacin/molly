@@ -4,9 +4,8 @@ import { Component } from "@angular/core";
   selector: "mol-nav",
   template: `
     <nav class="mol-nav mol-b-secondary-vlight mol-bc-secondary-vlight mol-p-sm mol-m-b-sm">
-      <ul class="mol-p-n mol-m-n">
-        <ng-content select="mol-nav-item"></ng-content>
-      </ul>
+      <ng-content select="mol-nav-header"></ng-content>
+      <ng-content select="mol-nav-item"></ng-content>
     </nav>
   `,
   styleUrls: ["./nav.component.scss"]

@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from "@angular/core";
 @Component({
   selector: "mol-nav-item",
   template: `
-    <li
+    <div
       class="mol-nav-item mol-l-nl mol-p-y-sm mol-m-r-md mol-c-tertiary-dark {{
         borderClasses
       }}"
@@ -11,7 +11,7 @@ import { Component, Input, OnInit } from "@angular/core";
       (mouseleave)="unhoverNavItem()"
     >
       <ng-content class="content"></ng-content>
-    </li>
+    </div>
   `,
   styleUrls: ["./nav-item.component.scss"]
 })
