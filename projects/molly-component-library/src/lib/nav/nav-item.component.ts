@@ -4,7 +4,7 @@ import { Component, Input, OnInit } from "@angular/core";
   selector: "mol-nav-item",
   template: `
     <div
-      class="mol-nav-item mol-l-nl mol-p-y-sm mol-m-r-md mol-c-tertiary-dark {{
+      class="mol-nav-item mol-ft mol-l-nl mol-p-y-sm mol-m-r-md mol-c-tertiary-dark {{
         borderClasses
       }}"
       (mouseenter)="hoverNavItem()"
