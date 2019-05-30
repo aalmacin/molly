@@ -12,6 +12,9 @@ import { Component } from "@angular/core";
       (hard)="hardClicked()"
       (done)="hideAll($event)"
     ></mol-flash-card>
+    <mol-nav>
+      <mol-nav-header>Hello</mol-nav-header>
+    </mol-nav>
   `,
   styles: []
 })

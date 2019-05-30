@@ -4,8 +4,8 @@ import { NavItemComponent } from './nav-item.component';
 import { NavHeaderComponent } from './nav-header.component';
 
 @NgModule({
-  declarations: [NavComponent, NavItemComponent, NavHeaderComponent],
+  declarations: [NavComponent, NavHeaderComponent, NavItemComponent],
   imports: [],
-  exports: [NavComponent, NavItemComponent, NavHeaderComponent]
+  exports: [NavComponent, NavHeaderComponent, NavItemComponent]
 })
 export class MolNavModule { }

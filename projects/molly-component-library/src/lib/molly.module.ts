@@ -8,10 +8,11 @@ import { ButtonComponent } from "./button/button.component";
 import { NavComponent } from './nav/nav.component';
 import { MolNavModule } from './nav/nav.module';
 import { NavItemComponent } from './nav/nav-item.component';
+import { NavHeaderComponent } from './nav/nav-header.component';
 
 @NgModule({
   declarations: [],
   imports: [MolButtonModule, MolCardModule, MolFlashCardModule, MolNavModule],
-  exports: [ButtonComponent, FlashCardComponent, CardComponent, NavComponent, NavItemComponent]
+  exports: [ButtonComponent, FlashCardComponent, CardComponent, NavComponent, NavItemComponent, NavHeaderComponent]
 })
 export class MollyModule {}

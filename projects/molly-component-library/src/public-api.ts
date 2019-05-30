@@ -15,4 +15,5 @@ export * from './lib/button/button.component';
 
 export * from './lib/nav/nav.module';
 export * from './lib/nav/nav.component';
+export * from './lib/nav/nav-header.component';
 export * from './lib/nav/nav-item.component';
