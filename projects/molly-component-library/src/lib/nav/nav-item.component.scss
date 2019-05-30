@@ -9,6 +9,11 @@
 }
 
 :host ::ng-deep {
+  .inactive a {
+    border-bottom: 1px solid #cce8ea;
+    padding-bottom: calc(0.5 * 1rem);
+  }
+
   .active a, a.active {
     border-bottom: 1px solid #35281c;
     padding-bottom: calc(0.5 * 1rem);
@@ -16,11 +21,6 @@
     &.hover {
       border-bottom: 1px solid #cce8ea;
     }
-  }
-
-  .inactive a {
-    border-bottom: 1px solid #cce8ea;
-    padding-bottom: calc(0.5 * 1rem);
   }
 
   .hover a {
