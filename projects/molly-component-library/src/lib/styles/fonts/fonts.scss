@@ -31,6 +31,10 @@
   h6 {
     @include header-font();
   }
+
+  body {
+    @include text-font();
+  }
 }
 
 .mol-fh {
