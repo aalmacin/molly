@@ -1,14 +1,25 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "mol-nav-header",
+  selector: "[mol-nav-header]",
+  host: { "[class]": "classes" },
   template: `
-    <div
-      class="mol-nav-header mol-l-nl mol-fs-vl mol-fh mol-p-y-sm mol-m-r-md mol-c-tertiary-dark">
-      <ng-content class="content"></ng-content>
-    </div>
+    <ng-content class="content"></ng-content>
   `,
-  styleUrls: ["./nav-header.component.scss"]
+  styles: [
+    `
+      :host {
+        cursor: pointer;
+      }
+
+      :host ::ng-deep a {
+        font-family: inherit;
+        color: inherit;
+        text-decoration: inherit;
+      }
+    `
+  ]
 })
 export class NavHeaderComponent {
+  classes = 'mol-nav-header mol-l-nl mol-fs-vl mol-fh mol-p-y-sm mol-m-r-md mol-c-tertiary-dark';
 }

@@ -1,4 +1,4 @@
-.mol-nav-item {
+:host {
   cursor: pointer;
 }
 
@@ -6,24 +6,19 @@
   font-family: inherit;
   color: inherit;
   text-decoration: inherit;
-}
+  border-bottom: 1px solid #cce8ea;
+  padding-bottom: calc(0.5 * 1rem);
 
-:host ::ng-deep {
-  .inactive a {
-    border-bottom: 1px solid #cce8ea;
-    padding-bottom: calc(0.5 * 1rem);
-  }
-
-  .active a, a.active {
+  &.active {
     border-bottom: 1px solid #35281c;
     padding-bottom: calc(0.5 * 1rem);
 
-    &.hover {
+    &:hover {
       border-bottom: 1px solid #cce8ea;
     }
   }
 
-  .hover a {
+  &:hover {
     border-bottom: 1px solid #6492a0;
     padding-bottom: calc(0.5 * 1rem);
   }

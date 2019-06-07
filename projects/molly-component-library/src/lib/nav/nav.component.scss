@@ -1,5 +1,17 @@
-.mol-nav {
+
+:host {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+:host ::ng-deep .mol-nav-items {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+}
+
+:host ::ng-deep .mol-nav-items-end {
+  display: flex;
+  flex-direction: row;
 }

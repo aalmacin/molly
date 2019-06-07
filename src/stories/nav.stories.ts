@@ -1,21 +1,26 @@
 import { storiesOf } from "@storybook/angular";
-import {
-  NavComponent,
-  NavItemComponent
-} from "../../projects/molly-component-library/src/public-api";
+import { NavComponent } from 'projects/molly-component-library/src/lib/nav/nav.component';
+import { NavItemComponent } from 'projects/molly-component-library/src/lib/nav/nav-item.component';
 import { NavHeaderComponent } from 'projects/molly-component-library/src/lib/nav/nav-header.component';
+import { NavItemEndComponent } from 'projects/molly-component-library/src/lib/nav/nav-item-end.component';
 
 const stories = storiesOf("Raidrin|Nav", module);
 
 stories.add("Default", () => ({
   moduleMetadata: {
-    declarations: [NavComponent, NavItemComponent, NavHeaderComponent]
+    declarations: [
+      NavComponent,
+      NavItemComponent,
+      NavHeaderComponent,
+      NavItemEndComponent
+    ]
   },
-  template: `<mol-nav>
-    <mol-nav-header>Fish</mol-nav-header>
-    <mol-nav-item><a href="#">Home</a></mol-nav-item>
-    <mol-nav-item><a>Fishes</a></mol-nav-item>
-    <mol-nav-item active="true"><a>Guppy</a></mol-nav-item>
-    <mol-nav-item><a class="active">Platy</a></mol-nav-item>
-  </mol-nav>`
+  template: `<nav mol-nav>
+    <div mol-nav-header>Fish</div>
+    <div mol-nav-item><a href="#">Home</a></div>
+    <div mol-nav-item><a>Fishes</a></div>
+    <div mol-nav-item><a>Guppy</a></div>
+    <div mol-nav-item><a class="active">Platy</a></div>
+    <div mol-nav-item-end><a>Signout</a></div>
+  </nav>`
 }));
