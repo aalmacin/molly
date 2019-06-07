@@ -11,30 +11,29 @@
 @mixin generateFontClasses($tokensConfig) {
   $fontSizeMap: map-get($tokensConfig, 'fontSizeMap');
 
-  @each $fontSize, $fontSizeValue in $fontSizeMap {
+  @each $fontSize,
+  $fontSizeValue in $fontSizeMap {
     .mol-fs-#{$fontSize} {
       font-size: #{$fontSizeValue};
     }
   }
 }
 
-.mol-fd {
-  * {
-    @include text-font();
-  }
+* {
+  @include text-font();
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @include header-font();
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include header-font();
+}
 
-  body {
-    @include text-font();
-  }
+body {
+  @include text-font();
 }
 
 .mol-fh {
