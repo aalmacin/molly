@@ -27,3 +27,29 @@ stories.add("Default", () => ({
     <mol-btn [type]="type" [size]="size">{{ text }}</mol-btn>
   `
 }));
+
+
+stories.add("With Link", () => ({
+  moduleMetadata: {
+    declarations: [ButtonComponent]
+  },
+  props: {
+    text: text("text", "Hello Button"),
+    type: select("type", [
+      ButtonType.PRIMARY,
+      ButtonType.SECONDARY,
+      ButtonType.TERTIARY,
+      ButtonType.DEFAULT
+    ], ButtonType.PRIMARY),
+    size: select('size', [
+      ButtonSize.SMALL,
+      ButtonSize.MEDIUM,
+      ButtonSize.LARGE
+    ], ButtonSize.MEDIUM)
+  },
+  template: `
+    <mol-btn [type]="type" [size]="size">
+      <a href="#hello">Hello</a>
+    </mol-btn>
+  `
+}));
