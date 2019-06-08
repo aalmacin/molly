@@ -6,7 +6,9 @@ import { ButtonType, ButtonSize } from 'projects/molly-component-library/src/lib
 const stories = storiesOf("Raidrin|Button", module);
 
 stories.add("Default", () => ({
-  component: ButtonComponent,
+  moduleMetadata: {
+    declarations: [ButtonComponent]
+  },
   props: {
     text: text("text", "Hello Button"),
     type: select("type", [
@@ -20,5 +22,8 @@ stories.add("Default", () => ({
       ButtonSize.MEDIUM,
       ButtonSize.LARGE
     ], ButtonSize.MEDIUM)
-  }
+  },
+  template: `
+    <mol-btn [type]="type" [size]="size">{{ text }}</mol-btn>
+  `
 }));

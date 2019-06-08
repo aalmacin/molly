@@ -7,15 +7,12 @@ import { ButtonSize, ButtonType } from "./button";
     <button
       class="mol-btn mol-m-t-sm mol-p-sm mol-tc {{ colorClasses }} {{ sizeClasses }}"
     >
-      {{ text }}
+      <ng-content></ng-content>
     </button>
   `,
   styleUrls: ["./button.component.scss"]
 })
 export class ButtonComponent implements OnInit {
-  @Input()
-  text = "";
-
   @Input()
   type = ButtonType.DEFAULT;
 
