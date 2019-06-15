@@ -1,10 +1,6 @@
 import { configure, addDecorator } from '@storybook/angular';
 import requireContext from 'require-context.macro';
 
-import { withTests } from '@storybook/addon-jest';
-
-import results from '../jest-test-results.json';
-
 import { withNotes } from '@storybook/addon-notes';
 import { withKnobs } from '@storybook/addon-knobs';
 import { withA11y } from '@storybook/addon-a11y';
@@ -19,7 +15,6 @@ function loadStories() {
 }
 
 addDecorator(withNotes);
-addDecorator(withTests({ results, filesExt: '((\\.component))((\\.specs?)|(\\.tests?))?(\\.js)?$' }));
 addDecorator(withKnobs)
 addDecorator(withA11y)
 
