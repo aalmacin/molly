@@ -1,6 +1,6 @@
 import { storiesOf } from "@storybook/angular";
 
-const measureStories = storiesOf("CSS Library/Typography/Measures", module);
+const measureStories = storiesOf("CSS Library|Typography/Measures", module);
 const loremipsum =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet leo leo. Sed pretium arcu tellus, ut tristique felis imperdiet facilisis.";
 

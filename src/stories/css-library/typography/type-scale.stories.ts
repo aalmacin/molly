@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/angular";
 import { text } from '@storybook/addon-knobs';
 
-const stories = storiesOf("CSS Library/Typography/TypeScale", module);
+const stories = storiesOf("CSS Library|Typography/TypeScale", module);
 
 stories.add("Type Scale", () => ({
   props: {

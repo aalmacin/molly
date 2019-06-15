@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/angular";
 import { radios } from "@storybook/addon-knobs";
 
-const measureStories = storiesOf("CSS Library/Typography/Tracking", module);
+const measureStories = storiesOf("CSS Library|Typography/Tracking", module);
 const loremipsum = "LOREM IPSUM DOLOR SIT AMET";
 
 measureStories.add("all", () => ({

@@ -1,7 +1,7 @@
 import { storiesOf } from "@storybook/angular";
 import { text } from '@storybook/addon-knobs';
 
-const stories = storiesOf("CSS Library/Typography/Text Transform", module);
+const stories = storiesOf("CSS Library|Typography/Text Transform", module);
 
 stories.add("All", () => ({
   props: {
