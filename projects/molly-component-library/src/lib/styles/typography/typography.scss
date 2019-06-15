@@ -17,4 +17,6 @@
 
 @include generate($text-transform, tt, text-transform);
 
-@include generate($font-weights, fw, font-weight)
+@include generate($font-weights, fw, font-weight);
+
+@include generate($font-styles, fs, font-style);
