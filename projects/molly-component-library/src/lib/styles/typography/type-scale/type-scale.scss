@@ -10,9 +10,15 @@ base: 40em,
 w: 50em);
 
 $line-heights: (
-  solid: 1,
-  title: 1.25,
-  copy: 1.5
+  s: 1,
+  t: 1.25,
+  c: 1.5
+);
+
+$tracking: (
+  base: .1em,
+  t: -.05em,
+  m: .25em,
 );
 
 @mixin generate($map, $prefix, $cssRule) {
@@ -66,4 +72,11 @@ $line-heights: (
   $cssRule: line-height;
 
   @include generate($line-heights, $prefix, $cssRule);
+}
+
+@mixin genTracking() {
+  $prefix: tr;
+  $cssRule: letter-spacing;
+
+  @include generateWithBase($tracking, $prefix, $cssRule);
 }
