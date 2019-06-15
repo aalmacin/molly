@@ -21,6 +21,12 @@ $tracking: (
   m: .25em,
 );
 
+$text-transform: (
+  u: uppercase,
+  l: lowercase,
+  c: capitalize,
+);
+
 @mixin generate($map, $prefix, $cssRule) {
 
   @each $name,
@@ -80,3 +86,16 @@ $tracking: (
 
   @include generateWithBase($tracking, $prefix, $cssRule);
 }
+
+@mixin genTextTransform() {
+  $prefix: tt;
+  $cssRule: text-transform;
+
+  @include generate($text-transform, $prefix, $cssRule);
+}
+
+@include genTypeScale();
+@include genMeasure();
+@include genLineHeights();
+@include genTracking();
+@include genTextTransform();

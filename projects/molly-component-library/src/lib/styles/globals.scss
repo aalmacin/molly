@@ -21,8 +21,3 @@
 // @include generateFontClasses($tokensConfig);
 
 @import './typography/type-scale/type-scale.scss';
-
-@include genTypeScale();
-@include genMeasure();
-@include genLineHeights();
-@include genTracking();
