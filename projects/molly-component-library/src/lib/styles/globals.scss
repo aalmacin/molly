@@ -1,21 +1,26 @@
 @import "./fonts/fonts.scss";
 
-@import "./space/margin.scss";
-@import "./space/padding.scss";
-@import "./color/color.scss";
-@import "./text/text.scss";
-@import "./border/border.scss";
+// @import "./space/margin.scss";
+// @import "./space/padding.scss";
+// @import "./color/color.scss";
+// @import "./text/text.scss";
+// @import "./border/border.scss";
 
-@import "./list/list.scss";
+// @import "./list/list.scss";
 
-@import "./tokens.scss";
+// @import "./tokens.scss";
 
-@include generatePaddingClasses($tokensConfig);
-@include generateMarginClasses($tokensConfig);
+// @include generatePaddingClasses($tokensConfig);
+// @include generateMarginClasses($tokensConfig);
 
-@include generateBackgroundColorClasses($tokensConfig);
-@include generateFontColorClasses($tokensConfig);
+// @include generateBackgroundColorClasses($tokensConfig);
+// @include generateFontColorClasses($tokensConfig);
 
-@include generateBorderClasses($tokensConfig);
+// @include generateBorderClasses($tokensConfig);
 
-@include generateFontClasses($tokensConfig);
+// @include generateFontClasses($tokensConfig);
+
+@import './typography/type-scale/type-scale.scss';
+
+@include genTypeScale();
+@include genMeasure();

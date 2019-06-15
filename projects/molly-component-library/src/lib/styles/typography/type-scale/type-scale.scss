@@ -1,0 +1,56 @@
+$baseFontSize: 1rem;
+
+$font-sizes: (vl: 2rem,
+lg: 1.5rem,
+base: $baseFontSize,
+sm: 0.875rem);
+
+$measures: (n: 25em,
+base: 40em,
+w: 50em);
+
+@mixin generate($map, $prefix, $cssRule) {
+
+  @each $name,
+  $val in $map {
+    .mol-#{$prefix}-#{$name} {
+      #{$cssRule}: $val;
+    }
+  }
+}
+
+@mixin generateWithBase($map, $prefix, $cssRule) {
+
+  @each $name,
+  $val in $map {
+    $className: #{$prefix}-#{$name};
+
+    @if($name==base) {
+      $className: #{$prefix}
+    }
+
+    .mol-#{$className} {
+      #{$cssRule}: $val;
+    }
+  }
+}
+
+@mixin genTypeScale() {
+  $prefix: f;
+  $cssRule: font-size;
+
+  @include generate($font-sizes, $prefix, $cssRule);
+}
+
+@mixin genMeasure() {
+  $prefix: mea;
+  $cssRule: max-width;
+
+  @include generateWithBase($measures, $prefix, $cssRule);
+}
+
+.mol-trunc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
