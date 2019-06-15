@@ -8,17 +8,6 @@
   font-family: 'Questrial', sans-serif;
 }
 
-@mixin generateFontClasses($tokensConfig) {
-  $fontSizeMap: map-get($tokensConfig, 'fontSizeMap');
-
-  @each $fontSize,
-  $fontSizeValue in $fontSizeMap {
-    .mol-fs-#{$fontSize} {
-      font-size: #{$fontSizeValue};
-    }
-  }
-}
-
 * {
   @include text-font();
 }

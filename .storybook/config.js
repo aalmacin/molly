@@ -6,7 +6,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { withA11y } from '@storybook/addon-a11y';
 
 // automatically import all files ending in *.stories.ts
-const req = requireContext('../src/', true, /\.stories\.ts$/);
+const req = requireContext('../projects/', true, /\.stories\.ts$/);
 
 import '!style-loader!css-loader!sass-loader!../projects/molly-component-library/src/lib/styles/globals.scss';
 

@@ -16,3 +16,5 @@
 @include generateWithBase($tracking, tr, letter-spacing);
 
 @include generate($text-transform, tt, text-transform);
+
+@include generate($font-weights, fw, font-weight)
