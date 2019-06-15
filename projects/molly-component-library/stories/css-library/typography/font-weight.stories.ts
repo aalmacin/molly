@@ -1,9 +1,9 @@
 import { storiesOf } from "@storybook/angular";
 import { text, radios } from '@storybook/addon-knobs';
 
-const stories = storiesOf("CSS Library|Typography/Font Weight", module);
+const stories = storiesOf("CSS Library|Typography", module);
 
-stories.add("all", () => ({
+stories.add("Font Weight", () => ({
   props: {
     items: [
       { desc: "normal", class: "mol-fw-n" },
