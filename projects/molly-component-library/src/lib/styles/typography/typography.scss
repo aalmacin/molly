@@ -20,3 +20,5 @@
 @include generate($font-weights, fw, font-weight);
 
 @include generate($font-styles, fs, font-style);
+
+@include generate($vertical-aligns, v, vertical-align);
