@@ -1,0 +1,18 @@
+@import './variables';
+@import './utils';
+
+.mol-trunc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@include generate($font-sizes, f, font-size);
+
+@include generateWithBase($measures, mea, max-width);
+
+@include generate($line-heights, lh, line-height);
+
+@include generateWithBase($tracking, tr, letter-spacing);
+
+@include generate($text-transform, tt, text-transform);
