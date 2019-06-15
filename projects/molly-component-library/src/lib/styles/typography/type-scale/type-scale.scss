@@ -9,6 +9,12 @@ $measures: (n: 25em,
 base: 40em,
 w: 50em);
 
+$line-heights: (
+  solid: 1,
+  title: 1.25,
+  copy: 1.5
+);
+
 @mixin generate($map, $prefix, $cssRule) {
 
   @each $name,
@@ -53,4 +59,11 @@ w: 50em);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@mixin genLineHeights() {
+  $prefix: lh;
+  $cssRule: line-height;
+
+  @include generate($line-heights, $prefix, $cssRule);
 }
