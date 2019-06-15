@@ -9,6 +9,7 @@ truncateStories.add("Default", () => ({
     loremipsum
   },
   template: `
+      <h2>mol-trunc</h2>
       <div class="mol-trunc">
         {{ loremipsum }}
       </div>
