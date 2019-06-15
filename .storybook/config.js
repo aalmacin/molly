@@ -49,7 +49,7 @@ addParameters({
     theme: create({
       base: "light",
       brandTitle: "Molly",
-      brandImage: '/molly-brand.png',
+      brandImage: '/assets/molly-brand.png',
 
       appBg: palette.primary.base,
       appBorderColor: palette.tertiary.dark,
