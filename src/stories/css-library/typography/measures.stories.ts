@@ -1,47 +1,34 @@
 import { storiesOf } from "@storybook/angular";
+import { text, radios } from '@storybook/addon-knobs';
 
 const measureStories = storiesOf("CSS Library|Typography/Measures", module);
 const loremipsum =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet leo leo. Sed pretium arcu tellus, ut tristique felis imperdiet facilisis.";
 
-measureStories.add("All Sizes", () => ({
+measureStories.add("all", () => ({
   props: {
-    measures: ["mea-n", "mea", "mea-w"],
-    loremipsum
+    fontSize: radios(
+      "Font Size",
+      {
+        small: "mol-f-sm",
+        normal: "",
+        large: "mol-f-lg",
+        'very large': "mol-f-vl",
+      },
+      "mol-f-sm"
+    ),
+    items: [
+      { desc: "none", class: "" },
+      { desc: "narrow", class: "mol-mea-n" },
+      { desc: "normal", class: "mol-mea" },
+      { desc: "wide", class: "mol-mea-w" }
+    ],
+    loremipsum: text('Text', loremipsum)
   },
   template: `
-
-    <h1>Small</h1>
-    <ng-container *ngFor="let measure of measures">
-      <h2>mol-{{ measure }}</h2>
-      <div class="mol-f-sm mol-{{ measure }}">
-        {{ loremipsum }}
-      </div>
-      <br>
-    </ng-container>
-
-    <h1>Normal</h1>
-    <ng-container *ngFor="let measure of measures">
-      <h2>mol-{{ measure }}</h2>
-      <div class="mol-{{ measure }}">
-        {{ loremipsum }}
-      </div>
-      <br>
-    </ng-container>
-
-    <h1>Large</h1>
-    <ng-container *ngFor="let measure of measures">
-      <h2>mol-{{ measure }}</h2>
-      <div class="mol-f-lg mol-{{ measure }}">
-        {{ loremipsum }}
-      </div>
-      <br>
-    </ng-container>
-
-    <h1>Very Large</h1>
-    <ng-container *ngFor="let measure of measures">
-      <h2>mol-{{ measure }}</h2>
-      <div class="mol-f-vl mol-{{ measure }}">
+    <ng-container *ngFor="let item of items">
+      <h3>{{ item.desc }} <span *ngIf="item.class">({{ item.class }})</span></h3>
+      <div class="{{ fontSize }} {{ item.class }}">
         {{ loremipsum }}
       </div>
       <br>

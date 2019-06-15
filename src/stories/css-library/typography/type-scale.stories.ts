@@ -3,7 +3,7 @@ import { text } from '@storybook/addon-knobs';
 
 const stories = storiesOf("CSS Library|Typography/TypeScale", module);
 
-stories.add("Type Scale", () => ({
+stories.add("all", () => ({
   props: {
     items: [
       { desc: "small", class: "mol-f-sm" },

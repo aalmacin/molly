@@ -3,7 +3,7 @@ import { text } from '@storybook/addon-knobs';
 
 const stories = storiesOf("CSS Library|Typography/Text Transform", module);
 
-stories.add("All", () => ({
+stories.add("all", () => ({
   props: {
     items: [
       { desc: "none", class: "" },
