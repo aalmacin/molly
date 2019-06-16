@@ -1,26 +1,17 @@
 import { storiesOf } from "@storybook/angular";
-import { text, radios } from '@storybook/addon-knobs';
+import { propFactory, commonProps } from './propFactory.util';
 
 const stories = storiesOf("CSS Library|Typography", module);
 
 stories.add("Font Styles", () => ({
-  props: {
-    items: [
+  props: propFactory(
+    [
       { desc: "normal", class: "mol-fs-n" },
       { desc: "italic", class: "mol-fs-i" }
     ],
-    fontSize: radios(
-      "Font Size",
-      {
-        small: "mol-f-sm",
-        normal: "",
-        large: "mol-f-lg",
-        'very large': "mol-f-vl",
-      },
-      "mol-f-sm"
-    ),
-    text: text('Text', 'HELLO WORLD hello world')
-  },
+    commonProps.fontSize,
+    commonProps.text
+  ),
   template: `
     <ng-container *ngFor="let item of items">
       <h3>{{ item.desc }}</h3>
