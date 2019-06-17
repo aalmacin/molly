@@ -1,19 +1,21 @@
 import { storiesOf } from "@storybook/angular";
-import { text } from '@storybook/addon-knobs';
+import { text } from "@storybook/addon-knobs";
+import { propFactory, commonProps } from "./propFactory.util";
 
 const stories = storiesOf("CSS Library|Typography", module);
 
 stories.add("Type Scale", () => ({
-  props: {
-    items: [
+  props: propFactory(
+    [
       { desc: "small", class: "mol-tf-sm" },
       { desc: "base", class: "" },
       { desc: "large", class: "mol-tf-lg" },
       { desc: "very large", class: "mol-tf-vl" }
     ],
-    text: text('Text', 'the quick brown fox jumps over the lazy dog')
-  },
+    commonProps.text
+  ),
   template: `
+    <h3>Smallest to Largest</h3>
     <ng-container *ngFor="let item of items">
       <span [class]="item.class">
         [ {{ item.class || 'base' }} ]

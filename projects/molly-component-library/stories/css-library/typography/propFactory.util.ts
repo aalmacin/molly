@@ -7,12 +7,12 @@ const createFontSize = () =>
   radios(
     "Font Size",
     {
-      small: "mol-f-sm",
+      small: "mol-tf-sm",
       normal: "",
-      large: "mol-f-lg",
-      "very large": "mol-f-vl"
+      large: "mol-tf-lg",
+      "very large": "mol-tf-vl"
     },
-    "mol-f-sm"
+    "mol-tf-sm"
   );
 
 const createText = () =>
@@ -27,20 +27,27 @@ const createLongText = () =>
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in tortor consectetur, fringilla nisi quis, facilisis ipsum. Curabitur pretium placerat diam non sollicitudin. Nunc ac tortor ipsum. Pellentesque non fringilla ex, eget scelerisque nibh. Maecenas at urna diam. Aenean rutrum dui sit amet ipsum ultricies vestibulum. Nullam tempor, ligula ut efficitur molestie, nulla ante consequat risus, vitae auctor velit neque at erat. Donec felis urna, tempor eget nisl a, tempor gravida tellus. Vestibulum sed tempor est. Vestibulum tristique, magna in feugiat feugiat, nisl neque gravida leo, et fermentum turpis lacus in elit. Suspendisse viverra, quam et viverra tincidunt, ante ligula vestibulum erat, faucibus pellentesque ex elit vitae ligula. Vestibulum tempor dolor at ornare convallis. Praesent sed lacinia mauris."
   );
 
+const createHeading = () =>
+  text(
+    "Heading",
+    "LOREM IPSUM DOLOR SIT AMET"
+  );
+
 const createMeasure = () =>
   radios(
     "Measure",
     {
-      narrow: "mol-mea-n",
-      normal: "mol-mea",
-      wide: "mol-mea-w"
+      narrow: "mol-tm-n",
+      normal: "mol-tm",
+      wide: "mol-tm-w"
     },
-    "mol-mea-w"
+    "mol-tm-w"
   );
 
 export const commonProps = {
   fontSize: { name: "fontSize", func: createFontSize },
   text: { name: "text", func: createText },
+  heading: { name: "heading", func: createHeading },
   longText: { name: "longText", func: createLongText },
   measure: { name: "measure", func: createMeasure }
 };
