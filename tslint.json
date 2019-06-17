@@ -1,0 +1,14 @@
+{
+  "rulesDirectory": [
+    "node_modules/codelyzer"
+  ],
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-prettier"
+  ],
+  "defaultSeverity": "warning",
+  "linterOptions": {
+    "exclude": [],
+    "format": "stylish"
+  }
+}

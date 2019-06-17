@@ -1,12 +1,12 @@
-import { storiesOf } from "@storybook/angular";
-import { NavComponent } from 'projects/molly-component-library/src/lib/nav/nav.component';
-import { NavItemComponent } from 'projects/molly-component-library/src/lib/nav/nav-item.component';
+import { storiesOf } from '@storybook/angular';
 import { NavHeaderComponent } from 'projects/molly-component-library/src/lib/nav/nav-header.component';
 import { NavItemEndComponent } from 'projects/molly-component-library/src/lib/nav/nav-item-end.component';
+import { NavItemComponent } from 'projects/molly-component-library/src/lib/nav/nav-item.component';
+import { NavComponent } from 'projects/molly-component-library/src/lib/nav/nav.component';
 
-const stories = storiesOf("Raidrin|Nav", module);
+const stories = storiesOf('Raidrin|Nav', module);
 
-stories.add("Default", () => ({
+stories.add('Default', () => ({
   moduleMetadata: {
     declarations: [
       NavComponent,

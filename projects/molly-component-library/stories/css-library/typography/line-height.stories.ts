@@ -1,15 +1,15 @@
-import { storiesOf } from "@storybook/angular";
-import { propFactory, commonProps } from './propFactory.util';
+import { storiesOf } from '@storybook/angular';
+import { commonProps, propFactory } from './propFactory.util';
 
-const measureStories = storiesOf("CSS Library|Typography", module);
+const measureStories = storiesOf('CSS Library|Typography', module);
 
-measureStories.add("Line Height", () => ({
+measureStories.add('Line Height', () => ({
   props: propFactory(
     [
-      { desc: "none", class: "" },
-      { desc: "solid", class: "mol-tlh-s" },
-      { desc: "title", class: "mol-tlh-t" },
-      { desc: "copy", class: "mol-tlh-c" }
+      { desc: 'none', class: '' },
+      { desc: 'solid', class: 'mol-tlh-s' },
+      { desc: 'title', class: 'mol-tlh-t' },
+      { desc: 'copy', class: 'mol-tlh-c' }
     ],
     commonProps.longText,
     commonProps.measure

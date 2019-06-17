@@ -1,8 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
 import { MolFlashCardModule, MolNavModule } from 'projects/molly-component-library/src/public-api';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [

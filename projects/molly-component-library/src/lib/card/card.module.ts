@@ -6,4 +6,4 @@ import { CardComponent } from './card.component';
   imports: [],
   exports: [CardComponent]
 })
-export class MolCardModule { }
+export class MolCardModule {}

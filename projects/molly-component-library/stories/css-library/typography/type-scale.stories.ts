@@ -1,15 +1,15 @@
-import { storiesOf } from "@storybook/angular";
-import { propFactory, commonProps } from "./propFactory.util";
+import { storiesOf } from '@storybook/angular';
+import { commonProps, propFactory } from './propFactory.util';
 
-const stories = storiesOf("CSS Library|Typography", module);
+const stories = storiesOf('CSS Library|Typography', module);
 
-stories.add("Type Scale", () => ({
+stories.add('Type Scale', () => ({
   props: propFactory(
     [
-      { desc: "small", class: "mol-tf-sm" },
-      { desc: "base", class: "" },
-      { desc: "large", class: "mol-tf-lg" },
-      { desc: "very large", class: "mol-tf-vl" }
+      { desc: 'small', class: 'mol-tf-sm' },
+      { desc: 'base', class: '' },
+      { desc: 'large', class: 'mol-tf-lg' },
+      { desc: 'very large', class: 'mol-tf-vl' }
     ],
     commonProps.text
   ),

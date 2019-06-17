@@ -1,15 +1,15 @@
-import { storiesOf } from "@storybook/angular";
-import { propFactory, commonProps } from "./propFactory.util";
+import { storiesOf } from '@storybook/angular';
+import { commonProps, propFactory } from './propFactory.util';
 
-const stories = storiesOf("CSS Library|Typography", module);
+const stories = storiesOf('CSS Library|Typography', module);
 
-stories.add("Text Transform", () => ({
+stories.add('Text Transform', () => ({
   props: propFactory(
     [
-      { desc: "none", class: "" },
-      { desc: "uppercase", class: "mol-ttt-u" },
-      { desc: "lowercase", class: "mol-ttt-l" },
-      { desc: "capitalize", class: "mol-ttt-c" }
+      { desc: 'none', class: '' },
+      { desc: 'uppercase', class: 'mol-ttt-u' },
+      { desc: 'lowercase', class: 'mol-ttt-l' },
+      { desc: 'capitalize', class: 'mol-ttt-c' }
     ],
     commonProps.text
   ),

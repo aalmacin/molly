@@ -3,10 +3,10 @@ export enum ButtonType {
   SECONDARY = 'secondary',
   TERTIARY = 'tertiary',
   DEFAULT = 'default'
-};
+}
 
 export enum ButtonSize {
   SMALL = 'small',
   MEDIUM = 'medium',
-  LARGE = 'large',
+  LARGE = 'large'
 }

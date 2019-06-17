@@ -1,14 +1,10 @@
-import { storiesOf } from "@storybook/angular";
-import { propFactory, commonProps } from './propFactory.util';
+import { storiesOf } from '@storybook/angular';
+import { commonProps, propFactory } from './propFactory.util';
 
-const truncateStories = storiesOf("CSS Library|Typography", module);
+const truncateStories = storiesOf('CSS Library|Typography', module);
 
-truncateStories.add("Truncate", () => ({
-  props: propFactory(
-    [],
-    commonProps.measure,
-    commonProps.longText
-  ),
+truncateStories.add('Truncate', () => ({
+  props: propFactory([], commonProps.measure, commonProps.longText),
   template: `
       <h2>mol-trunc</h2>
       <div class="mol-ttrunc {{ measure }}">

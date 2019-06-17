@@ -8,12 +8,16 @@
     "cl:build": "ng build molly-component-library",
     "cl:build:watch": "ng build molly-component-library --watch",
     "cl:build:publish": "ng build molly-component-library && sass projects/molly-component-library/src/lib/styles/globals.scss dist/molly-component-library/molly.dist.css && npm publish dist/molly-component-library",
+    "lint": "ng lint",
+    "lint:fix": "ng lint molly --fix",
+    "format": "prettier --config .prettierrc --list-different \"./projects/**/*.{ts,js,scss,html}\"",
+    "format:fix": "prettier --config .prettierrc --write \"./projects/**/*.{ts,js,scss,html}\"",
+    "fix": "npm run lint:fix && npm run format:fix",
     "storybook": "start-storybook -p 6009 -s ./src/app/assets",
     "build-storybook": "build-storybook && mkdirp storybook-static/assets && cpx ./src/assets/* storybook-static/assets",
     "test:g-out": "ng test --json --outputFile=jest-test-results.json || true",
     "test:update-snapshot": "ng test --updateSnapshots",
     "test": "ng test",
-    "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -33,6 +37,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "tslib": "^1.9.0",
+    "tslint-config-prettier": "^1.18.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
@@ -61,6 +66,7 @@
     "babel-jest": "^24.7.1",
     "babel-loader": "^8.0.5",
     "babel-plugin-require-context-hook": "^1.0.0",
+    "codelyzer": "^5.1.0",
     "cpx": "^1.5.0",
     "enzyme": "^3.9.0",
     "jest": "^24.7.1",

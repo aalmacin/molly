@@ -1,8 +1,8 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
-import { BehaviorSubject, Observable } from "rxjs";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
-  selector: "mol-flash-card",
+  selector: 'mol-flash-card',
   template: `
     <div class="mol-flash-card mol-tc mol-fd">
       <mol-card
@@ -12,8 +12,18 @@ import { BehaviorSubject, Observable } from "rxjs";
       ></mol-card>
 
       <div class="mol-flash-card-difficulty-group" *ngIf="flipped$ | async">
-        <mol-btn class="mol-flash-card-difficulty mol-flash-card-easy" type="default" (click)="easyClicked()">Easy</mol-btn>
-        <mol-btn class="mol-flash-card-difficulty mol-flash-card-hard" type="default" (click)="hardClicked()">Hard</mol-btn>
+        <mol-btn
+          class="mol-flash-card-difficulty mol-flash-card-easy"
+          type="default"
+          (click)="easyClicked()"
+          >Easy</mol-btn
+        >
+        <mol-btn
+          class="mol-flash-card-difficulty mol-flash-card-hard"
+          type="default"
+          (click)="hardClicked()"
+          >Hard</mol-btn
+        >
       </div>
 
       <mol-btn
@@ -21,56 +31,57 @@ import { BehaviorSubject, Observable } from "rxjs";
         type="primary"
         size="medium"
         (click)="flip()"
-      >Show Answer</mol-btn>
+        >Show Answer</mol-btn
+      >
     </div>
   `,
-  styleUrls: ["./flash-card.component.scss"]
+  styleUrls: ['./flash-card.component.scss']
 })
 export class FlashCardComponent {
   @Input()
-  topic = "";
+  public topic = '';
 
   @Input()
-  front = "";
+  public front = '';
 
   @Input()
-  back = "";
+  public back = '';
 
   @Output()
-  done = new BehaviorSubject<boolean>(false);
+  public done = new BehaviorSubject<boolean>(false);
 
   @Output()
-  flipped = new BehaviorSubject<boolean>(false);
+  public flipped = new BehaviorSubject<boolean>(false);
 
   @Output()
-  easy = new EventEmitter();
+  public easy = new EventEmitter();
 
   @Output()
-  hard = new EventEmitter();
+  public hard = new EventEmitter();
 
-  flipped$: Observable<boolean>;
-  done$: Observable<boolean>;
+  public flipped$: Observable<boolean>;
+  public done$: Observable<boolean>;
 
   constructor() {
     this.flipped$ = this.flipped.asObservable();
     this.done$ = this.done.asObservable();
   }
 
-  flip() {
+  public flip() {
     this.flipped.next(true);
   }
 
-  easyClicked() {
+  public easyClicked() {
     this.easy.emit();
     this.finish();
   }
 
-  hardClicked() {
+  public hardClicked() {
     this.hard.emit();
     this.finish();
   }
 
-  finish() {
+  public finish() {
     this.done.next(true);
   }
 }

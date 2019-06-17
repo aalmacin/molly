@@ -1,43 +1,61 @@
 $base: 1rem;
 $base-text: 1rem;
 
-$spaceMap: (vs: calc(0.25 * #{$base}),
-sm: calc(0.5 * #{$base}),
-md: #{$base},
-lg: calc(1.25 * #{$base}),
-vl: calc(1.5 * #{$base}));
-
-$fontSizeMap: (vs: calc(0.25 * #{$base-text}),
-sm: calc(0.5 * #{$base-text}),
-md: #{$base-text},
-lg: calc(1.25 * #{$base-text}),
-vl: calc(1.5 * #{$base-text}));
-
-
-$thicknessMap: (normal: 1px,
-thick: 2px,
-vthick: 3px,
+$spaceMap: (
+  vs: calc(0.25 * #{$base}),
+  sm: calc(0.5 * #{$base}),
+  md: #{$base},
+  lg: calc(1.25 * #{$base}),
+  vl: calc(1.5 * #{$base})
 );
 
-$paletteMap: (primary: (vlight: #91ed77,
-light: #77cc62,
-base: #5ea84e,
-dark: #3f7233,
-vdark: #39632f),
-secondary: (vlight: #cce8ea,
-light: #a9d5e0,
-base: #6fadbc,
-dark: #6492a0,
-vdark: #5d7f8c),
-tertiary: (vlight: #d3a479,
-light: #a37d5a,
-base: #7c5f42,
-dark: #56412e,
-vdark: #35281c),
-white: (base: #fcfcfc),
-black: (base: #111111));
+$fontSizeMap: (
+  vs: calc(0.25 * #{$base-text}),
+  sm: calc(0.5 * #{$base-text}),
+  md: #{$base-text},
+  lg: calc(1.25 * #{$base-text}),
+  vl: calc(1.5 * #{$base-text})
+);
 
-$tokensConfig: (paletteMap: $paletteMap,
-spaceMap: $spaceMap,
-fontSizeMap: $fontSizeMap,
-thicknessMap: $thicknessMap);
+$thicknessMap: (
+  normal: 1px,
+  thick: 2px,
+  vthick: 3px
+);
+
+$paletteMap: (
+  primary: (
+    vlight: #91ed77,
+    light: #77cc62,
+    base: #5ea84e,
+    dark: #3f7233,
+    vdark: #39632f
+  ),
+  secondary: (
+    vlight: #cce8ea,
+    light: #a9d5e0,
+    base: #6fadbc,
+    dark: #6492a0,
+    vdark: #5d7f8c
+  ),
+  tertiary: (
+    vlight: #d3a479,
+    light: #a37d5a,
+    base: #7c5f42,
+    dark: #56412e,
+    vdark: #35281c
+  ),
+  white: (
+    base: #fcfcfc
+  ),
+  black: (
+    base: #111111
+  )
+);
+
+$tokensConfig: (
+  paletteMap: $paletteMap,
+  spaceMap: $spaceMap,
+  fontSizeMap: $fontSizeMap,
+  thicknessMap: $thicknessMap
+);

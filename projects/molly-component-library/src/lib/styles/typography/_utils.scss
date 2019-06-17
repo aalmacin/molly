@@ -1,7 +1,5 @@
 @mixin generate($map, $prefix, $cssRule) {
-
-  @each $name,
-  $val in $map {
+  @each $name, $val in $map {
     .mol-#{$prefix}-#{$name} {
       #{$cssRule}: $val;
     }
@@ -9,13 +7,11 @@
 }
 
 @mixin generateWithBase($map, $prefix, $cssRule) {
-
-  @each $name,
-  $val in $map {
+  @each $name, $val in $map {
     $className: #{$prefix}-#{$name};
 
-    @if($name==base) {
-      $className: #{$prefix}
+    @if ($name==base) {
+      $className: #{$prefix};
     }
 
     .mol-#{$className} {

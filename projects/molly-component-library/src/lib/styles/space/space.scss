@@ -1,5 +1,5 @@
-@import "../utils.scss";
-@import "../variables/direction.scss";
+@import '../utils.scss';
+@import '../variables/direction.scss';
 
 @mixin _generateClass($class, $cssClass, $spaceValue) {
   #{$class} {
@@ -8,15 +8,15 @@
 }
 
 @function _generateSpaceClassName($prefix, $space, $direction) {
-  @if($direction == 'a') {
-    @return ".#{$prefix}-#{$space}";
+  @if ($direction == 'a') {
+    @return '.#{$prefix}-#{$space}';
   } @else {
-    @return ".#{$prefix}-#{$direction}-#{$space}";
+    @return '.#{$prefix}-#{$direction}-#{$space}';
   }
 }
 
 @function _generateSpaceCssRule($type, $directionValue) {
-  @return "#{$type}-#{$directionValue}";
+  @return '#{$type}-#{$directionValue}';
 }
 
 @mixin generateSpaceClasses($prefix, $type, $tokensConfig) {
@@ -24,21 +24,21 @@
 
   @each $direction, $directionValue in $directionMap {
     @each $space, $spaceValue in $spaceMap {
-
       @if type-of($directionValue) == 'map' {
         @each $singleDirection, $singleDirectionValue in $directionValue {
           @include _generateClass(
             _generateSpaceClassName($prefix, $space, $direction),
             _generateSpaceCssRule($type, $singleDirectionValue),
-            $spaceValue)
+            $spaceValue
+          );
         }
       } @else {
-          @include _generateClass(
-            _generateSpaceClassName($prefix, $space, $direction),
-            _generateSpaceCssRule($type, $directionValue),
-            $spaceValue)
+        @include _generateClass(
+          _generateSpaceClassName($prefix, $space, $direction),
+          _generateSpaceCssRule($type, $directionValue),
+          $spaceValue
+        );
       }
-
     }
   }
 }

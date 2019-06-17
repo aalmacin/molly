@@ -1,13 +1,13 @@
-import { storiesOf } from "@storybook/angular";
-import { propFactory, commonProps } from './propFactory.util';
+import { storiesOf } from '@storybook/angular';
+import { commonProps, propFactory } from './propFactory.util';
 
-const stories = storiesOf("CSS Library|Typography", module);
+const stories = storiesOf('CSS Library|Typography', module);
 
-stories.add("Font Styles", () => ({
+stories.add('Font Styles', () => ({
   props: propFactory(
     [
-      { desc: "normal", class: "mol-tfs-n" },
-      { desc: "italic", class: "mol-tfs-i" }
+      { desc: 'normal', class: 'mol-tfs-n' },
+      { desc: 'italic', class: 'mol-tfs-i' }
     ],
     commonProps.fontSize,
     commonProps.text

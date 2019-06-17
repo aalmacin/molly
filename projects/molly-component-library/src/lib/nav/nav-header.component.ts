@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-  selector: "[mol-nav-header]",
-  host: { "[class]": "classes" },
+  selector: '[mol-nav-header]',
+  host: { '[class]': 'classes' },
   template: `
     <ng-content class="content"></ng-content>
   `,
@@ -21,5 +21,6 @@ import { Component } from "@angular/core";
   ]
 })
 export class NavHeaderComponent {
-  classes = 'mol-nav-header mol-l-nl mol-fs-vl mol-fh mol-p-y-sm mol-m-r-md mol-c-tertiary-dark';
+  public classes =
+    'mol-nav-header mol-l-nl mol-fs-vl mol-fh mol-p-y-sm mol-m-r-md mol-c-tertiary-dark';
 }

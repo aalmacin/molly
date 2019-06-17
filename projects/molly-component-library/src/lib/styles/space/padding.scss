@@ -1,5 +1,5 @@
-@import "./space.scss";
-@import "../tokens.scss";
+@import './space.scss';
+@import '../tokens.scss';
 
 @mixin generatePaddingClasses($tokensConfig) {
   @include generateSpaceClasses('p', 'padding', $tokensConfig);

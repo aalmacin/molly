@@ -1,8 +1,8 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-  selector: "nav[mol-nav]",
-  host: { "[class]": "classes" },
+  selector: 'nav[mol-nav]',
+  host: { '[class]': 'classes' },
   template: `
     <ng-content select="[mol-nav-header]"></ng-content>
     <div class="mol-nav-items">
@@ -12,9 +12,9 @@ import { Component } from "@angular/core";
       <ng-content select="[mol-nav-item-end]"></ng-content>
     </div>
   `,
-  styleUrls: ["./nav.component.scss"]
+  styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
-  classes =
-    "mol-nav mol-b-secondary-vlight mol-bc-secondary-vlight mol-p-sm mol-m-b-sm";
+  public classes =
+    'mol-nav mol-b-secondary-vlight mol-bc-secondary-vlight mol-p-sm mol-m-b-sm';
 }

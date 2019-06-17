@@ -1,15 +1,15 @@
-import { storiesOf } from "@storybook/angular";
-import { propFactory, commonProps } from "./propFactory.util";
+import { storiesOf } from '@storybook/angular';
+import { commonProps, propFactory } from './propFactory.util';
 
-const measureStories = storiesOf("CSS Library|Typography", module);
+const measureStories = storiesOf('CSS Library|Typography', module);
 
-measureStories.add("Tracking", () => ({
+measureStories.add('Tracking', () => ({
   props: propFactory(
     [
-      { desc: "none", class: "" },
-      { desc: "tracked", class: "mol-ttr" },
-      { desc: "tight", class: "mol-ttr-t" },
-      { desc: "mega", class: "mol-ttr-m" }
+      { desc: 'none', class: '' },
+      { desc: 'tracked', class: 'mol-ttr' },
+      { desc: 'tight', class: 'mol-ttr-t' },
+      { desc: 'mega', class: 'mol-ttr-m' }
     ],
     commonProps.heading,
     commonProps.fontSize

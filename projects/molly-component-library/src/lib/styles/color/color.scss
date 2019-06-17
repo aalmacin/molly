@@ -1,4 +1,4 @@
-@import "../utils.scss";
+@import '../utils.scss';
 
 @mixin _generateClass($class, $cssClass, $paletteValue) {
   #{$class} {
@@ -7,23 +7,24 @@
 }
 
 @function _generatePaletteClassName($prefix, $palette, $accent) {
-  @if($accent == 'base') {
-    @return ".#{$prefix}-#{$palette}";
+  @if ($accent == 'base') {
+    @return '.#{$prefix}-#{$palette}';
   } @else {
-    @return ".#{$prefix}-#{$palette}-#{$accent}";
+    @return '.#{$prefix}-#{$palette}-#{$accent}';
   }
 }
 
 @mixin generateColorClasses($prefix, $type, $tokensConfig) {
   $paletteMap: map-get($tokensConfig, 'paletteMap');
 
-    @each $palette, $paletteValue in $paletteMap {
-      @each $accent, $accentValue in $paletteValue {
-        @include _generateClass(
-          _generatePaletteClassName($prefix, $palette, $accent),
-          $type,
-          $accentValue);
-      }
+  @each $palette, $paletteValue in $paletteMap {
+    @each $accent, $accentValue in $paletteValue {
+      @include _generateClass(
+        _generatePaletteClassName($prefix, $palette, $accent),
+        $type,
+        $accentValue
+      );
+    }
   }
 }
 

@@ -6,4 +6,4 @@ import { ButtonComponent } from './button.component';
   imports: [],
   exports: [ButtonComponent]
 })
-export class MolButtonModule { }
+export class MolButtonModule {}

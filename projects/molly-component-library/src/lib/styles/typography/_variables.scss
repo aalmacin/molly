@@ -1,13 +1,17 @@
 $baseFontSize: 1rem;
 
-$font-sizes: (vl: 2rem,
-lg: 1.5rem,
-base: $baseFontSize,
-sm: 0.875rem);
+$font-sizes: (
+  vl: 2rem,
+  lg: 1.5rem,
+  base: $baseFontSize,
+  sm: 0.875rem
+);
 
-$measures: (n: 25em,
-base: 40em,
-w: 50em);
+$measures: (
+  n: 25em,
+  base: 40em,
+  w: 50em
+);
 
 $line-heights: (
   s: 1,
@@ -16,15 +20,15 @@ $line-heights: (
 );
 
 $tracking: (
-  base: .1em,
-  t: -.05em,
-  m: .25em,
+  base: 0.1em,
+  t: -0.05em,
+  m: 0.25em
 );
 
 $text-transform: (
   u: uppercase,
   l: lowercase,
-  c: capitalize,
+  c: capitalize
 );
 
 $font-weights: (

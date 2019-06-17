@@ -1,16 +1,14 @@
-import { storiesOf } from "@storybook/angular";
-import { propFactory } from "./propFactory.util";
+import { storiesOf } from '@storybook/angular';
+import { propFactory } from './propFactory.util';
 
-const stories = storiesOf("CSS Library|Typography", module);
+const stories = storiesOf('CSS Library|Typography', module);
 
-stories.add("Vertical Align", () => ({
-  props: propFactory(
-    [
-      { desc: "top", class: "mol-tv-t" },
-      { desc: "bottom", class: "mol-tv-b" },
-      { desc: "middle", class: "mol-tv-m" }
-    ]
-  ),
+stories.add('Vertical Align', () => ({
+  props: propFactory([
+    { desc: 'top', class: 'mol-tv-t' },
+    { desc: 'bottom', class: 'mol-tv-b' },
+    { desc: 'middle', class: 'mol-tv-m' }
+  ]),
   template: `
     <ng-container *ngFor="let item of items">
       <p>{{ item.desc }} ({{ item.class }})</p>
