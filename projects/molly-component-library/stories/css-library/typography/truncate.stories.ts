@@ -21,7 +21,7 @@ truncateStories.add("Truncate", () => ({
   },
   template: `
       <h2>mol-trunc</h2>
-      <div class="mol-trunc {{ measure }}">
+      <div class="mol-ttrunc {{ measure }}">
         {{ loremipsum }}
       </div>
   `

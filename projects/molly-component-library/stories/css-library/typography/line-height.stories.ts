@@ -1,5 +1,4 @@
 import { storiesOf } from "@storybook/angular";
-import { radios } from "@storybook/addon-knobs";
 import { propFactory, commonProps } from './propFactory.util';
 
 const measureStories = storiesOf("CSS Library|Typography", module);
@@ -8,9 +7,9 @@ measureStories.add("Line Height", () => ({
   props: propFactory(
     [
       { desc: "none", class: "" },
-      { desc: "solid", class: "mol-lh-s" },
-      { desc: "title", class: "mol-lh-t" },
-      { desc: "copy", class: "mol-lh-c" }
+      { desc: "solid", class: "mol-tlh-s" },
+      { desc: "title", class: "mol-tlh-t" },
+      { desc: "copy", class: "mol-tlh-c" }
     ],
     commonProps.longText,
     commonProps.measure

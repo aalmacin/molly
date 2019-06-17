@@ -6,9 +6,9 @@ const stories = storiesOf("CSS Library|Typography", module);
 stories.add("Vertical Align", () => ({
   props: {
     items: [
-      { desc: "top", class: "mol-v-t" },
-      { desc: "bottom", class: "mol-v-b" },
-      { desc: "middle", class: "mol-v-m" }
+      { desc: "top", class: "mol-tv-t" },
+      { desc: "bottom", class: "mol-tv-b" },
+      { desc: "middle", class: "mol-tv-m" }
     ],
     text: text("Text", "Hello world")
   },

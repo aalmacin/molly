@@ -1,24 +1,24 @@
 @import './variables';
 @import './utils';
 
-.mol-trunc {
+.mol-ttrunc {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-@include generate($font-sizes, f, font-size);
+@include generate($font-sizes, tf, font-size);
 
-@include generateWithBase($measures, mea, max-width);
+@include generateWithBase($measures, tm, max-width);
 
-@include generate($line-heights, lh, line-height);
+@include generate($line-heights, tlh, line-height);
 
-@include generateWithBase($tracking, tr, letter-spacing);
+@include generateWithBase($tracking, ttr, letter-spacing);
 
-@include generate($text-transform, tt, text-transform);
+@include generate($text-transform, ttt, text-transform);
 
-@include generate($font-weights, fw, font-weight);
+@include generate($font-weights, tfw, font-weight);
 
-@include generate($font-styles, fs, font-style);
+@include generate($font-styles, tfs, font-style);
 
-@include generate($vertical-aligns, v, vertical-align);
+@include generate($vertical-aligns, tv, vertical-align);

@@ -7,9 +7,9 @@ const stories = storiesOf("CSS Library|Typography", module);
 stories.add("Font Weight", () => ({
   props: propFactory(
     [
-      { desc: "normal", class: "mol-fw-n" },
-      { desc: "medium", class: "mol-fw-m" },
-      { desc: "bold", class: "mol-fw-b" }
+      { desc: "normal", class: "mol-tfw-n" },
+      { desc: "medium", class: "mol-tfw-m" },
+      { desc: "bold", class: "mol-tfw-b" }
     ],
     commonProps.fontSize,
     commonProps.text

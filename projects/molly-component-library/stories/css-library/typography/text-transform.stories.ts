@@ -7,9 +7,9 @@ stories.add("Text Transform", () => ({
   props: {
     items: [
       { desc: "none", class: "" },
-      { desc: "uppercase", class: "mol-tt-u" },
-      { desc: "lowercase", class: "mol-tt-l" },
-      { desc: "capitalize", class: "mol-tt-c" },
+      { desc: "uppercase", class: "mol-ttt-u" },
+      { desc: "lowercase", class: "mol-ttt-l" },
+      { desc: "capitalize", class: "mol-ttt-c" },
     ],
     text: text('Text', 'The quick brown fox jumps over the lazy dog')
   },

@@ -19,9 +19,9 @@ measureStories.add("Measures", () => ({
     ),
     items: [
       { desc: "none", class: "" },
-      { desc: "narrow", class: "mol-mea-n" },
-      { desc: "normal", class: "mol-mea" },
-      { desc: "wide", class: "mol-mea-w" }
+      { desc: "narrow", class: "mol-tm-n" },
+      { desc: "normal", class: "mol-tm" },
+      { desc: "wide", class: "mol-tm-w" }
     ],
     loremipsum: text('Text', loremipsum)
   },

@@ -6,10 +6,10 @@ const stories = storiesOf("CSS Library|Typography", module);
 stories.add("Type Scale", () => ({
   props: {
     items: [
-      { desc: "small", class: "mol-f-sm" },
+      { desc: "small", class: "mol-tf-sm" },
       { desc: "base", class: "" },
-      { desc: "large", class: "mol-f-lg" },
-      { desc: "very large", class: "mol-f-vl" }
+      { desc: "large", class: "mol-tf-lg" },
+      { desc: "very large", class: "mol-tf-vl" }
     ],
     text: text('Text', 'the quick brown fox jumps over the lazy dog')
   },

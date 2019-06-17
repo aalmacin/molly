@@ -17,9 +17,9 @@ measureStories.add("Tracking", () => ({
     ),
     items: [
       { desc: "none", class: "" },
-      { desc: "tracked", class: "mol-tr" },
-      { desc: "tight", class: "mol-tr-t" },
-      { desc: "mega", class: "mol-tr-m" }
+      { desc: "tracked", class: "mol-ttr" },
+      { desc: "tight", class: "mol-ttr-t" },
+      { desc: "mega", class: "mol-ttr-m" }
     ]
   },
   template: `
