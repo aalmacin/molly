@@ -1,5 +1,4 @@
 import { storiesOf } from "@storybook/angular";
-import { text, radios } from "@storybook/addon-knobs";
 import { propFactory, commonProps } from "./propFactory.util";
 
 const stories = storiesOf("CSS Library|Typography", module);
