@@ -12,7 +12,6 @@ import { MolNavModule } from './nav/nav.module';
 
 @NgModule({
   declarations: [],
-  imports: [MolButtonModule, MolCardModule, MolFlashCardModule, MolNavModule],
   exports: [
     ButtonComponent,
     FlashCardComponent,
@@ -20,6 +19,7 @@ import { MolNavModule } from './nav/nav.module';
     NavComponent,
     NavItemComponent,
     NavHeaderComponent
-  ]
+  ],
+  imports: [MolButtonModule, MolCardModule, MolFlashCardModule, MolNavModule],
 })
 export class MollyModule {}

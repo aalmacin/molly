@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'mol-card',
+  styleUrls: ['./card.component.scss'],
   template: `
     <div class="mol-card">
       <div
@@ -16,7 +17,6 @@ import { Component, Input } from '@angular/core';
       </div>
     </div>
   `,
-  styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
   @Input()

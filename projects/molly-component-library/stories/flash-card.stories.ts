@@ -17,11 +17,11 @@ stories.addDecorator(
 stories.add('Default', () => ({
   component: FlashCardComponent,
   props: {
-    topic: text('topic', 'Lorem ipsum dolor sit amet'),
-    front: text('front', 'Morbi egestas, justo ultrices lacinia consequat?'),
     back: text(
       'back',
       'Praesent dictum massa quis ligula tempus lobortis. Aliquam risus erat, tempus eget justo at, porttitor pellentesque neque.'
-    )
+    ),
+    front: text('front', 'Morbi egestas, justo ultrices lacinia consequat?'),
+    topic: text('topic', 'Lorem ipsum dolor sit amet')
   }
 }));

@@ -13,6 +13,11 @@ stories.add('Default', () => ({
     declarations: [ButtonComponent]
   },
   props: {
+    size: select(
+      'size',
+      [ButtonSize.SMALL, ButtonSize.MEDIUM, ButtonSize.LARGE],
+      ButtonSize.MEDIUM
+    ),
     text: text('text', 'Hello Button'),
     type: select(
       'type',
@@ -24,11 +29,6 @@ stories.add('Default', () => ({
       ],
       ButtonType.PRIMARY
     ),
-    size: select(
-      'size',
-      [ButtonSize.SMALL, ButtonSize.MEDIUM, ButtonSize.LARGE],
-      ButtonSize.MEDIUM
-    )
   },
   template: `
     <mol-btn [type]="type" [size]="size">{{ text }}</mol-btn>
@@ -40,6 +40,11 @@ stories.add('With Link', () => ({
     declarations: [ButtonComponent]
   },
   props: {
+    size: select(
+      'size',
+      [ButtonSize.SMALL, ButtonSize.MEDIUM, ButtonSize.LARGE],
+      ButtonSize.MEDIUM
+    ),
     text: text('text', 'Hello Button'),
     type: select(
       'type',
@@ -51,11 +56,6 @@ stories.add('With Link', () => ({
       ],
       ButtonType.PRIMARY
     ),
-    size: select(
-      'size',
-      [ButtonSize.SMALL, ButtonSize.MEDIUM, ButtonSize.LARGE],
-      ButtonSize.MEDIUM
-    )
   },
   template: `
     <mol-btn [type]="type" [size]="size">

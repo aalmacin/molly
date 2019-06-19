@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'nav[mol-nav]',
   host: { '[class]': 'classes' },
+  selector: 'nav[mol-nav]',
+  styleUrls: ['./nav.component.scss'],
   template: `
     <ng-content select="[mol-nav-header]"></ng-content>
     <div class="mol-nav-items">
@@ -12,7 +13,6 @@ import { Component } from '@angular/core';
       <ng-content select="[mol-nav-item-end]"></ng-content>
     </div>
   `,
-  styleUrls: ['./nav.component.scss']
 })
 export class NavComponent {
   public classes =

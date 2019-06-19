@@ -1,10 +1,10 @@
 import { radios, text } from '@storybook/addon-knobs';
 
-interface Prop {
+type Prop = {
   name: string;
-  func: Function;
+  func: () => any;
 }
-interface StoryItem {
+type StoryItem = {
   desc: string;
   class: string;
 }
@@ -13,9 +13,9 @@ const createFontSize = () =>
   radios(
     'Font Size',
     {
-      small: 'mol-tf-sm',
-      normal: '',
       large: 'mol-tf-lg',
+      normal: '',
+      small: 'mol-tf-sm',
       'very large': 'mol-tf-vl'
     },
     'mol-tf-sm'
@@ -48,15 +48,15 @@ const createMeasure = () =>
 
 export const commonProps = {
   fontSize: { name: 'fontSize', func: createFontSize },
-  text: { name: 'text', func: createText },
   heading: { name: 'heading', func: createHeading },
   longText: { name: 'longText', func: createLongText },
-  measure: { name: 'measure', func: createMeasure }
+  measure: { name: 'measure', func: createMeasure },
+  text: { name: 'text', func: createText },
 };
 
 const createItems = (...items: StoryItem[]) => ({
-  name: 'items',
-  func: () => items
+  func: () => items,
+  name: 'items'
 });
 
 export const propFactory = (items: StoryItem[], ...props: Prop[]) => {

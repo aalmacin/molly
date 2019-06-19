@@ -3,6 +3,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'mol-flash-card',
+  styleUrls: ['./flash-card.component.scss'],
   template: `
     <div class="mol-flash-card mol-tc mol-fd">
       <mol-card
@@ -35,7 +36,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
       >
     </div>
   `,
-  styleUrls: ['./flash-card.component.scss']
 })
 export class FlashCardComponent {
   @Input()

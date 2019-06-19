@@ -11,12 +11,12 @@ import { NavComponent } from './nav.component';
     NavItemComponent,
     NavItemEndComponent
   ],
-  imports: [],
   exports: [
     NavComponent,
     NavHeaderComponent,
     NavItemComponent,
     NavItemEndComponent
-  ]
+  ],
+  imports: []
 })
 export class MolNavModule {}

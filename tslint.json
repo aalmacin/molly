@@ -10,5 +10,9 @@
   "linterOptions": {
     "exclude": [],
     "format": "stylish"
+  },
+  "rules": {
+    "interface-over-type-literal": false,
+    "interface-name": false
   }
 }

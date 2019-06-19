@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: '[mol-nav-header]',
   host: { '[class]': 'classes' },
-  template: `
-    <ng-content class="content"></ng-content>
-  `,
+  selector: '[mol-nav-header]',
   styles: [
     `
       :host {
@@ -18,7 +15,10 @@ import { Component } from '@angular/core';
         text-decoration: inherit;
       }
     `
-  ]
+  ],
+  template: `
+    <ng-content class="content"></ng-content>
+  `,
 })
 export class NavHeaderComponent {
   public classes =

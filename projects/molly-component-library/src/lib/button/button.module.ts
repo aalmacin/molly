@@ -3,7 +3,7 @@ import { ButtonComponent } from './button.component';
 
 @NgModule({
   declarations: [ButtonComponent],
-  imports: [],
-  exports: [ButtonComponent]
+  exports: [ButtonComponent],
+  imports: []
 })
 export class MolButtonModule {}

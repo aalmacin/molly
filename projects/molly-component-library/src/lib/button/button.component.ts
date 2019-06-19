@@ -3,6 +3,7 @@ import { ButtonSize, ButtonType } from './button';
 
 @Component({
   selector: 'mol-btn',
+  styleUrls: ['./button.component.scss'],
   template: `
     <button
       class="mol-btn mol-m-t-sm mol-p-sm mol-tc {{ colorClasses }} {{
@@ -11,8 +12,7 @@ import { ButtonSize, ButtonType } from './button';
     >
       <ng-content></ng-content>
     </button>
-  `,
-  styleUrls: ['./button.component.scss']
+  `
 })
 export class ButtonComponent implements OnInit {
   @Input()

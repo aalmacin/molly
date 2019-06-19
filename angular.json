@@ -105,10 +105,10 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "projects/molly-component-library/tsconfig.lib.json"
             ],
             "exclude": [
+              "projects/**/*.spec.ts",
               "**/node_modules/**"
             ]
           }
