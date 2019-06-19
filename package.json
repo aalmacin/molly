@@ -3,8 +3,6 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4312",
-    "build": "ng build",
     "cl:build": "ng build molly",
     "cl:build:watch": "ng build molly --watch",
     "cl:build:publish": "npm run cl:build && sass projects/molly-component-library/src/lib/styles/globals.scss dist/molly-component-library/molly.dist.css && npm publish dist/molly-component-library",
@@ -19,6 +17,11 @@
     "test:update-snapshot": "ng test --updateSnapshots",
     "test": "ng test",
     "e2e": "ng e2e"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run format && npm run lint"
+    }
   },
   "private": true,
   "dependencies": {
