@@ -13,27 +13,24 @@ import { BehaviorSubject, Observable } from 'rxjs';
       ></mol-card>
 
       <div class="mol-flash-card-difficulty-group" *ngIf="flipped$ | async">
-        <mol-btn
+        <button molBtn
           class="mol-flash-card-difficulty mol-flash-card-easy"
           type="default"
           (click)="easyClicked()"
-          >Easy</mol-btn
-        >
-        <mol-btn
+          >Easy</button>
+        <button molBtn
           class="mol-flash-card-difficulty mol-flash-card-hard"
           type="default"
           (click)="hardClicked()"
-          >Hard</mol-btn
-        >
+          >Hard</button>
       </div>
 
-      <mol-btn
+      <button molBtn
         class="mol-flash-card-show-answer"
         type="primary"
         size="medium"
         (click)="flip()"
-        >Show Answer</mol-btn
-      >
+        >Show Answer</button>
     </div>
   `,
 })

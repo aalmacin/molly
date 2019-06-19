@@ -1,18 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ButtonSize, ButtonType } from './button';
+import { Component, Input, OnInit, Directive } from '@angular/core';
+import { ButtonSize, ButtonType } from './public-api';
 
-@Component({
-  selector: 'mol-btn',
-  styleUrls: ['./button.component.scss'],
-  template: `
-    <button
-      class="mol-btn mol-m-t-sm mol-p-sm mol-tc {{ colorClasses }} {{
-        sizeClasses
-      }}"
-    >
-      <ng-content></ng-content>
-    </button>
-  `
+@Directive({
+  host: { '[class]': 'classes' },
+  selector: '[molBtn]'
 })
 export class ButtonComponent implements OnInit {
   @Input()
@@ -21,38 +12,42 @@ export class ButtonComponent implements OnInit {
   @Input()
   public size = ButtonSize.MEDIUM;
 
-  public colorClasses: string;
-  public sizeClasses: string;
+  private classes = '';
 
   public ngOnInit(): void {
+    let colorClasses = '';
+    let sizeClasses = '';
+
     switch (this.type) {
       case ButtonType.PRIMARY:
-        this.colorClasses = 'mol-bc-primary mol-c-white';
+        colorClasses = 'mol-bc-primary mol-c-white';
         break;
       case ButtonType.SECONDARY:
-        this.colorClasses = 'mol-bc-secondary mol-c-white';
+        colorClasses = 'mol-bc-secondary mol-c-white';
         break;
       case ButtonType.TERTIARY:
-        this.colorClasses = 'mol-bc-tertiary mol-c-white';
+        colorClasses = 'mol-bc-tertiary mol-c-white';
         break;
       default:
-        this.colorClasses = 'mol-bc-white mol-c-black';
+        colorClasses = 'mol-bc-white mol-c-black';
         break;
     }
 
     switch (this.size) {
       case ButtonSize.SMALL:
-        this.sizeClasses = 'mol-fs-sm';
+        sizeClasses = 'mol-fs-sm';
         break;
       case ButtonSize.MEDIUM:
-        this.sizeClasses = 'mol-fs-md';
+        sizeClasses = 'mol-fs-md';
         break;
       case ButtonSize.LARGE:
-        this.sizeClasses = 'mol-fs-vl';
+        sizeClasses = 'mol-fs-vl';
         break;
       default:
-        this.sizeClasses = 'mol-fs-md';
+        sizeClasses = 'mol-fs-md';
         break;
     }
+
+    this.classes = `${colorClasses} ${sizeClasses}`;
   }
 }

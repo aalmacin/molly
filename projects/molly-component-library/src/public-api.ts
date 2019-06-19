@@ -2,19 +2,9 @@
  * Public API Surface of molly-component-library
  */
 
+export * from './lib/button/public-api';
+export * from './lib/card/public-api';
+export * from './lib/flash-card/public-api';
+export * from './lib/nav/public-api';
+
 export * from './lib/molly.module';
-
-export * from './lib/card/card.component';
-export * from './lib/card/card.module';
-
-export * from './lib/flash-card/flash-card.module';
-export * from './lib/flash-card/flash-card.component';
-
-export * from './lib/button/button.module';
-export * from './lib/button/button.component';
-
-export * from './lib/nav/nav.module';
-export * from './lib/nav/nav.component';
-export * from './lib/nav/nav-header.component';
-export * from './lib/nav/nav-item.component';
-export * from './lib/nav/nav-item-end.component';

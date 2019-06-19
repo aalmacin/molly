@@ -1,8 +1,5 @@
 import { storiesOf } from '@storybook/angular';
-import { NavHeaderComponent } from 'projects/molly-component-library/src/lib/nav/nav-header.component';
-import { NavItemEndComponent } from 'projects/molly-component-library/src/lib/nav/nav-item-end.component';
-import { NavItemComponent } from 'projects/molly-component-library/src/lib/nav/nav-item.component';
-import { NavComponent } from 'projects/molly-component-library/src/lib/nav/nav.component';
+import { NavHeaderComponent, NavComponent, NavItemComponent, NavItemEndComponent } from '../src/public-api';
 
 const stories = storiesOf('Raidrin|Nav', module);
 

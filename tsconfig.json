@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "strict": true,
     "resolveJsonModule": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
@@ -20,11 +21,8 @@
       "dom"
     ],
     "paths": {
-      "molly-component-library": [
+      "@molly": [
         "dist/molly-component-library"
-      ],
-      "molly-component-library/*": [
-        "dist/molly-component-library/*"
       ]
     }
   }

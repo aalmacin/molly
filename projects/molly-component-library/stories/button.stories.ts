@@ -1,10 +1,6 @@
 import { select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/angular';
-import {
-  ButtonSize,
-  ButtonType
-} from 'projects/molly-component-library/src/lib/button/button';
-import { ButtonComponent } from 'projects/molly-component-library/src/public-api';
+import { ButtonComponent, ButtonSize, ButtonType } from '../src/public-api';
 
 const stories = storiesOf('Raidrin|Button', module);
 
@@ -31,7 +27,7 @@ stories.add('Default', () => ({
     ),
   },
   template: `
-    <mol-btn [type]="type" [size]="size">{{ text }}</mol-btn>
+    <button molBtn [type]="type" [size]="size">{{ text }}</button>
   `
 }));
 
@@ -58,8 +54,8 @@ stories.add('With Link', () => ({
     ),
   },
   template: `
-    <mol-btn [type]="type" [size]="size">
+    <button molBtn [type]="type" [size]="size">
       <a href="#hello">Hello</a>
-    </mol-btn>
+    </button>
   `
 }));

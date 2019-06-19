@@ -1,6 +1,6 @@
 import { text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/angular';
-import { CardComponent } from '../../projects/molly-component-library/src/lib/card/card.component';
+import { CardComponent } from '../src/public-api';
 
 const stories = storiesOf('Raidrin|Card', module);
 
