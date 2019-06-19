@@ -18,7 +18,7 @@ import { Component } from '@angular/core';
   ],
   template: `
     <ng-content class="content"></ng-content>
-  `,
+  `
 })
 export class NavHeaderComponent {
   public classes =

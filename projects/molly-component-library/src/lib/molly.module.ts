@@ -1,5 +1,16 @@
 import { NgModule } from '@angular/core';
-import { ButtonComponent, FlashCardComponent, CardComponent, NavComponent, NavItemComponent, NavHeaderComponent, MolButtonModule, MolCardModule, MolFlashCardModule, MolNavModule } from '../public-api';
+import {
+  ButtonComponent,
+  CardComponent,
+  FlashCardComponent,
+  MolButtonModule,
+  MolCardModule,
+  MolFlashCardModule,
+  MolNavModule,
+  NavComponent,
+  NavHeaderComponent,
+  NavItemComponent
+} from '../public-api';
 
 @NgModule({
   declarations: [],
@@ -11,6 +22,6 @@ import { ButtonComponent, FlashCardComponent, CardComponent, NavComponent, NavIt
     NavItemComponent,
     NavHeaderComponent
   ],
-  imports: [MolButtonModule, MolCardModule, MolFlashCardModule, MolNavModule],
+  imports: [MolButtonModule, MolCardModule, MolFlashCardModule, MolNavModule]
 })
 export class MollyModule {}

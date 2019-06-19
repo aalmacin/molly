@@ -7,6 +7,6 @@ import { FlashCardComponent } from './flash-card.component';
 @NgModule({
   declarations: [FlashCardComponent],
   exports: [FlashCardComponent],
-  imports: [MolButtonModule, MolCardModule, CommonModule],
+  imports: [MolButtonModule, MolCardModule, CommonModule]
 })
 export class MolFlashCardModule {}

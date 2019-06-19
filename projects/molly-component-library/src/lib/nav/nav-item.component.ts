@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-item.component.scss'],
   template: `
     <ng-content class="content"></ng-content>
-  `,
+  `
 })
 export class NavItemComponent {
   public classes =

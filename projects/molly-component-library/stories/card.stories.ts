@@ -11,6 +11,6 @@ stories.add('Default', () => ({
       'content',
       'Morbi egestas, justo ultrices lacinia consequat, tortor nisl malesuada mi, convallis posuere elit orci at risus.'
     ),
-    heading: text('heading', 'Lorem ipsum dolor sit amet'),
+    heading: text('heading', 'Lorem ipsum dolor sit amet')
   }
 }));

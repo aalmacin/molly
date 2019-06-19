@@ -16,7 +16,7 @@ import { Component, Input } from '@angular/core';
         {{ content }}
       </div>
     </div>
-  `,
+  `
 })
 export class CardComponent {
   @Input()

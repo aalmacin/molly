@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
     <div class="mol-nav-items-end">
       <ng-content select="[mol-nav-item-end]"></ng-content>
     </div>
-  `,
+  `
 })
 export class NavComponent {
   public classes =

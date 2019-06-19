@@ -1,5 +1,10 @@
 import { storiesOf } from '@storybook/angular';
-import { NavHeaderComponent, NavComponent, NavItemComponent, NavItemEndComponent } from '../src/public-api';
+import {
+  NavComponent,
+  NavHeaderComponent,
+  NavItemComponent,
+  NavItemEndComponent
+} from '../src/public-api';
 
 const stories = storiesOf('Raidrin|Nav', module);
 

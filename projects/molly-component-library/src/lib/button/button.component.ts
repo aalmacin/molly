@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Directive } from '@angular/core';
+import { Component, Directive, Input, OnInit } from '@angular/core';
 import { ButtonSize, ButtonType } from './public-api';
 
 @Directive({

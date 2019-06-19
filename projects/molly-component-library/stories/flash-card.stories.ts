@@ -1,6 +1,10 @@
 import { text } from '@storybook/addon-knobs';
 import { moduleMetadata, storiesOf } from '@storybook/angular';
-import { MolButtonModule, MolCardModule, FlashCardComponent } from '../src/public-api';
+import {
+  FlashCardComponent,
+  MolButtonModule,
+  MolCardModule
+} from '../src/public-api';
 
 const stories = storiesOf('Raidrin|FlashCard', module);
 

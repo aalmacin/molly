@@ -24,7 +24,7 @@ stories.add('Default', () => ({
         ButtonType.DEFAULT
       ],
       ButtonType.PRIMARY
-    ),
+    )
   },
   template: `
     <button molBtn [type]="type" [size]="size">{{ text }}</button>
@@ -51,7 +51,7 @@ stories.add('With Link', () => ({
         ButtonType.DEFAULT
       ],
       ButtonType.PRIMARY
-    ),
+    )
   },
   template: `
     <button molBtn [type]="type" [size]="size">
