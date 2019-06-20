@@ -14,7 +14,7 @@ stories.add('Font Styles', () => ({
   ),
   template: `
     <ng-container *ngFor="let item of items">
-      <h3>{{ item.desc }}</h3>
+      <h3>{{ item.desc }} ({{item.class}})</h3>
       <div [class]="item.class">
         <span [class]="fontSize">{{ text }}</span>
       </div>

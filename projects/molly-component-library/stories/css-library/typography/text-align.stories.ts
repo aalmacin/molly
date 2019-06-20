@@ -3,12 +3,12 @@ import { commonProps, propFactory } from './propFactory.util';
 
 const stories = storiesOf('CSS Library|Typography', module);
 
-stories.add('Font Weight', () => ({
+stories.add('Text Align', () => ({
   props: propFactory(
     [
-      { desc: 'normal', class: 'mol-tfw-n' },
-      { desc: 'medium', class: 'mol-tfw-m' },
-      { desc: 'bold', class: 'mol-tfw-b' }
+      { desc: 'left', class: 'mol-tta-l' },
+      { desc: 'center', class: 'mol-tta-c' },
+      { desc: 'right', class: 'mol-tta-r' }
     ],
     commonProps.fontSize,
     commonProps.text

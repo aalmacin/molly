@@ -47,3 +47,15 @@ $vertical-aligns: (
   t: top,
   b: bottom
 );
+
+$text-aligns: (
+  l: left,
+  c: center,
+  r: right
+);
+
+$text-decorations: (
+  nu: no-underline,
+  u: underline,
+  s: line-through
+);

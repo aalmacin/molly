@@ -3,21 +3,20 @@ import { commonProps, propFactory } from './propFactory.util';
 
 const stories = storiesOf('CSS Library|Typography', module);
 
-stories.add('Font Weight', () => ({
+stories.add('Text Decoration', () => ({
   props: propFactory(
     [
-      { desc: 'normal', class: 'mol-tfw-n' },
-      { desc: 'medium', class: 'mol-tfw-m' },
-      { desc: 'bold', class: 'mol-tfw-b' }
+      { desc: 'no underline', class: 'mol-ttd-nu' },
+      { desc: 'underline', class: 'mol-ttd-u' },
+      { desc: 'strikethrough', class: 'mol-ttd-s' }
     ],
-    commonProps.fontSize,
     commonProps.text
   ),
   template: `
     <ng-container *ngFor="let item of items">
-      <h3>{{ item.desc }} ({{item.class}})</h3>
+      <h3>{{ item.desc }} <span *ngIf="item.class">({{ item.class }})</span></h3>
       <div [class]="item.class">
-        <span [class]="fontSize">{{ text }}</span>
+        {{ text }}
       </div>
     </ng-container>
   `
