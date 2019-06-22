@@ -1,5 +1,6 @@
 import { storiesOf } from '@storybook/angular';
-import { commonProps, propFactory } from './propFactory.util';
+import { propFactory } from '../propFactory.util';
+import { commonProps } from './commonProps.util';
 
 const truncateStories = storiesOf('CSS Library|Typography', module);
 

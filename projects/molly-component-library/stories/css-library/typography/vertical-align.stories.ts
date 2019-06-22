@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/angular';
-import { propFactory } from './propFactory.util';
+import { propFactory } from '../propFactory.util';
 
 const stories = storiesOf('CSS Library|Typography', module);
 
