@@ -6,12 +6,12 @@ import { Component, Input } from '@angular/core';
   template: `
     <div class="mol-card">
       <div
-        class="mol-b-primary-light-x mol-b-primary-light-t mol-bc-primary-light mol-c-white mol-tc mol-p-sm mol-fh"
+        class="mol-sb-secondary-light-x mol-sb-secondary-light-t mol-sbg-secondary-light mol-sc-white mol-tta-c mol-lp-sm mol-tff-h"
       >
         {{ heading }}
       </div>
       <div
-        class="mol-b-primary-light-x mol-b-primary-light-b mol-bc-white mol-tc p-lg"
+        class="mol-sb-secondary-light-x mol-sb-secondary-light-b mol-sbg-white mol-tta-c mol-lp-lg"
       >
         {{ content }}
       </div>

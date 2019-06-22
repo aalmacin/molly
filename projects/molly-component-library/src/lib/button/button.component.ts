@@ -1,8 +1,14 @@
-import { Component, Directive, Input, OnInit } from '@angular/core';
+import {
+  Component,
+  Directive,
+  ElementRef,
+  Input,
+  OnInit,
+  Renderer2
+} from '@angular/core';
 import { ButtonSize, ButtonType } from './public-api';
 
 @Directive({
-  host: { '[class]': 'classes' },
   selector: '[molBtn]'
 })
 export class ButtonComponent implements OnInit {
@@ -14,40 +20,56 @@ export class ButtonComponent implements OnInit {
 
   public classes = '';
 
+  constructor(private renderer: Renderer2, private hostElement: ElementRef) {}
+
   public ngOnInit(): void {
-    let colorClasses = '';
-    let sizeClasses = '';
+    let color = 'mol-sc-black';
+    let backgroundColor = 'mol-sbg-white';
+    let textSize = 'mol-tf-md';
+    let padding = 'mol-lp-md';
+    let padding2 = 'mol-lp-md';
 
     switch (this.type) {
       case ButtonType.PRIMARY:
-        colorClasses = 'mol-sbg-primary mol-sc-white';
+        color = 'mol-sc-white';
+        backgroundColor = 'mol-sbg-primary';
         break;
       case ButtonType.SECONDARY:
-        colorClasses = 'mol-sbg-secondary mol-sc-white';
+        color = 'mol-sc-white';
+        backgroundColor = 'mol-sbg-secondary';
         break;
       case ButtonType.TERTIARY:
-        colorClasses = 'mol-sbg-tertiary mol-sc-white';
+        color = 'mol-sc-white';
+        backgroundColor = 'mol-sbg-tertiary';
         break;
       default:
-        colorClasses = 'mol-sbg-white mol-sc-black';
         break;
     }
 
     switch (this.size) {
       case ButtonSize.SMALL:
-        sizeClasses = 'mol-tf-sm mol-lp-sm';
+        textSize = 'mol-tf-sm';
+        padding = 'mol-lp-sm';
         break;
       case ButtonSize.MEDIUM:
-        sizeClasses = 'mol-tf-md mol-lp-md';
+        textSize = 'mol-tf-md';
+        padding = 'mol-lp-md';
         break;
       case ButtonSize.LARGE:
-        sizeClasses = 'mol-tf-vl mol-lp-x-lg mol-lp-y-md';
+        textSize = 'mol-tf-vl';
+        padding = 'mol-lp-x-lg';
+        padding2 = 'mol-lp-y-md';
         break;
       default:
-        sizeClasses = 'mol-tf-md mol-lp-md';
+        textSize = 'mol-tf-md';
+        padding = 'mol-lp-md';
         break;
     }
 
-    this.classes = `${colorClasses} ${sizeClasses}`;
+    this.renderer.addClass(this.hostElement.nativeElement, color);
+    this.renderer.addClass(this.hostElement.nativeElement, backgroundColor);
+    this.renderer.addClass(this.hostElement.nativeElement, textSize);
+    this.renderer.addClass(this.hostElement.nativeElement, padding);
+    this.renderer.addClass(this.hostElement.nativeElement, padding2);
   }
 }

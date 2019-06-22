@@ -5,7 +5,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
   selector: 'mol-flash-card',
   styleUrls: ['./flash-card.component.scss'],
   template: `
-    <div class="mol-flash-card mol-tc mol-fd">
+    <div
+      class="mol-flash-card mol-tta-c mol-lf mol-lf-fd-c mol-lf-jc-c mol-lf-fw"
+    >
       <mol-card
         heading="{{ topic }}"
         content="{{ (flipped$ | async) ? back : front }}"
@@ -15,16 +17,16 @@ import { BehaviorSubject, Observable } from 'rxjs';
       <div class="mol-flash-card-difficulty-group" *ngIf="flipped$ | async">
         <button
           molBtn
-          class="mol-flash-card-difficulty mol-flash-card-easy"
-          type="default"
+          class="mol-flash-card-difficulty mol-flash-card-easy mol-lw-50"
+          type="secondary"
           (click)="easyClicked()"
         >
           Easy
         </button>
         <button
           molBtn
-          class="mol-flash-card-difficulty mol-flash-card-hard"
-          type="default"
+          class="mol-flash-card-difficulty mol-flash-card-hard mol-lw-50"
+          type="secondary"
           (click)="hardClicked()"
         >
           Hard
@@ -32,9 +34,10 @@ import { BehaviorSubject, Observable } from 'rxjs';
       </div>
 
       <button
+        *ngIf="!(flipped$ | async)"
         molBtn
-        class="mol-flash-card-show-answer"
-        type="primary"
+        class="mol-flash-card-show-answer mol-lw-100"
+        type="secondary"
         size="medium"
         (click)="flip()"
       >

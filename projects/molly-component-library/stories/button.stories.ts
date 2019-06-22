@@ -40,11 +40,15 @@ stories.add('With Link', () => ({
     declarations: [ButtonComponent]
   },
   props: {
-    size: radios('size', {
-      small: ButtonSize.SMALL,
-      medium: ButtonSize.MEDIUM,
-      large: ButtonSize.LARGE
-    }),
+    size: radios(
+      'size',
+      {
+        small: ButtonSize.SMALL,
+        medium: ButtonSize.MEDIUM,
+        large: ButtonSize.LARGE
+      },
+      ButtonSize.SMALL
+    ),
     text: text('text', 'Hello Button'),
     type: select(
       'type',
@@ -58,8 +62,8 @@ stories.add('With Link', () => ({
     )
   },
   template: `
-    <button molBtn [type]="type" [size]="size">
-      <a href="#hello">Hello</a>
-    </button>
+    <a href="#hello" molBtn [type]="type" [size]="size">
+      {{ text }}
+    </a>
   `
 }));

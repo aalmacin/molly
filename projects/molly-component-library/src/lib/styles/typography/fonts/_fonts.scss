@@ -24,11 +24,3 @@ h6 {
 body {
   @include text-font();
 }
-
-.mol-fh {
-  @include header-font();
-}
-
-.mol-ft {
-  @include text-font();
-}
