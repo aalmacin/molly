@@ -1,4 +1,4 @@
-import { select, text } from '@storybook/addon-knobs';
+import { radios, select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/angular';
 import { ButtonComponent, ButtonSize, ButtonType } from '../src/public-api';
 
@@ -9,10 +9,14 @@ stories.add('Default', () => ({
     declarations: [ButtonComponent]
   },
   props: {
-    size: select(
+    size: radios(
       'size',
-      [ButtonSize.SMALL, ButtonSize.MEDIUM, ButtonSize.LARGE],
-      ButtonSize.MEDIUM
+      {
+        small: ButtonSize.SMALL,
+        medium: ButtonSize.MEDIUM,
+        large: ButtonSize.LARGE
+      },
+      ButtonSize.SMALL
     ),
     text: text('text', 'Hello Button'),
     type: select(
@@ -36,11 +40,11 @@ stories.add('With Link', () => ({
     declarations: [ButtonComponent]
   },
   props: {
-    size: select(
-      'size',
-      [ButtonSize.SMALL, ButtonSize.MEDIUM, ButtonSize.LARGE],
-      ButtonSize.MEDIUM
-    ),
+    size: radios('size', {
+      small: ButtonSize.SMALL,
+      medium: ButtonSize.MEDIUM,
+      large: ButtonSize.LARGE
+    }),
     text: text('text', 'Hello Button'),
     type: select(
       'type',

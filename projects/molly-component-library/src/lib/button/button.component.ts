@@ -10,9 +10,9 @@ export class ButtonComponent implements OnInit {
   public type = ButtonType.DEFAULT;
 
   @Input()
-  public size = ButtonSize.MEDIUM;
+  public size = ButtonSize.LARGE;
 
-  private classes = '';
+  public classes = '';
 
   public ngOnInit(): void {
     let colorClasses = '';
@@ -20,31 +20,31 @@ export class ButtonComponent implements OnInit {
 
     switch (this.type) {
       case ButtonType.PRIMARY:
-        colorClasses = 'mol-bc-primary mol-c-white';
+        colorClasses = 'mol-sbg-primary mol-sc-white';
         break;
       case ButtonType.SECONDARY:
-        colorClasses = 'mol-bc-secondary mol-c-white';
+        colorClasses = 'mol-sbg-secondary mol-sc-white';
         break;
       case ButtonType.TERTIARY:
-        colorClasses = 'mol-bc-tertiary mol-c-white';
+        colorClasses = 'mol-sbg-tertiary mol-sc-white';
         break;
       default:
-        colorClasses = 'mol-bc-white mol-c-black';
+        colorClasses = 'mol-sbg-white mol-sc-black';
         break;
     }
 
     switch (this.size) {
       case ButtonSize.SMALL:
-        sizeClasses = 'mol-fs-sm';
+        sizeClasses = 'mol-tf-sm mol-lp-sm';
         break;
       case ButtonSize.MEDIUM:
-        sizeClasses = 'mol-fs-md';
+        sizeClasses = 'mol-tf-md mol-lp-md';
         break;
       case ButtonSize.LARGE:
-        sizeClasses = 'mol-fs-vl';
+        sizeClasses = 'mol-tf-vl mol-lp-x-lg mol-lp-y-md';
         break;
       default:
-        sizeClasses = 'mol-fs-md';
+        sizeClasses = 'mol-tf-md mol-lp-md';
         break;
     }
 
