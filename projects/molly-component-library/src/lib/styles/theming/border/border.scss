@@ -1,6 +1,3 @@
-@import '../utils.scss';
-@import '../variables/direction.scss';
-
 @mixin _generateClass($cssClass, $rule, $borderValue) {
   #{$cssClass} {
     #{$rule}: #{$borderValue};
@@ -41,10 +38,7 @@
   @return '#{$thickness} solid #{$color}';
 }
 
-@mixin _generateBorderClasses($prefix, $type, $tokensConfig) {
-  $thicknessMap: map-get($tokensConfig, 'thicknessMap');
-  $paletteMap: map-get($tokensConfig, 'paletteMap');
-
+@mixin generateBorderClasses($prefix, $type) {
   @each $direction, $directionValue in $directionMap {
     @each $thickness, $thicknessValue in $thicknessMap {
       @each $palette, $paletteValue in $paletteMap {
@@ -80,9 +74,4 @@
       }
     }
   }
-}
-
-@mixin generateBorderClasses($tokensConfig) {
-  @include _generateBorderClasses('b', 'border', $tokensConfig);
-  @include _generateBorderClasses('mol-b', 'border', $tokensConfig);
 }

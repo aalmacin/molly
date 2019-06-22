@@ -1,0 +1,8 @@
+@import './border/border.scss';
+@import './color/color.scss';
+
+@include generateBorderClasses('mol-sb', 'border');
+
+@include generateColorClasses('mol-sbg', 'background-color');
+
+@include generateColorClasses('mol-sc', 'color');
