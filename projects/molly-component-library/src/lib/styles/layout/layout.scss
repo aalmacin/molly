@@ -59,3 +59,7 @@
 .mol-lfl-cf {
   zoom: 1;
 }
+
+@include generate($displayMap, ld, display);
+
+@include generate($widthMap, lw, width);
