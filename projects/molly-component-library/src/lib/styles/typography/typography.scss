@@ -1,6 +1,8 @@
 @import '../tokens';
 @import '../utils';
 
+@import './fonts/_fonts.scss';
+
 .mol-ttrunc {
   white-space: nowrap;
   overflow: hidden;

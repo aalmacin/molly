@@ -9,10 +9,16 @@
   display: flex;
 }
 
+.mol-lf-n {
+  flex: none;
+}
+
 .mol-lf-a {
   flex: 1 1 auto;
-  min-width: 0; /* 1 */
-  min-height: 0; /* 1 */
+  min-width: 0;
+  /* 1 */
+  min-height: 0;
+  /* 1 */
 }
 
 .mol-lf-fw {
@@ -35,9 +41,21 @@
 @include generate($flexAlignItemsMap, lf-as, align-self);
 @include generate($flexAlignContentMap, lf-ac, align-content);
 @include generate($flexJustifyContentMap, lf-jc, justify-content);
-
 @include generate($flexOrderMap, lf-fo, order);
 
-.mol-lf-fn {
-  flex: none;
+@include generate($floatMap, lfl, float);
+
+/** clearfix **/
+.mol-lfl-cf:before,
+.mol-lfl-cf:after {
+  content: ' ';
+  display: table;
+}
+
+.mol-lfl-cf:after {
+  clear: both;
+}
+
+.mol-lfl-cf {
+  zoom: 1;
 }

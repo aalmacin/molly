@@ -5,7 +5,7 @@ const stories = storiesOf('CSS Library|Layout/Flex', module);
 
 stories.add('Enable Flex', () => ({
   props: propFactory([
-    { desc: 'no flex', class: '' },
+    { desc: 'no flex', class: 'mol-lf-n' },
     { desc: 'flex', class: 'mol-lf' }
   ]),
   template: `
