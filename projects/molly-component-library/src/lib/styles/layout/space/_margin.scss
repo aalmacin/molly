@@ -1,0 +1,9 @@
+@import './space.scss';
+@import '../../tokens.scss';
+
+@include generateSpaceClasses('m', 'margin', $spaceMap);
+@include generateSpaceClasses('mol-m', 'margin', $spaceMap);
+
+.mol-m-n {
+  margin: 0;
+}

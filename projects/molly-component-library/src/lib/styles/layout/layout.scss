@@ -1,5 +1,9 @@
-@import './variables';
-@import '../utils/generators';
+@import '../tokens';
+@import '../utils';
+
+@import './boxSizing';
+@import './space/margin';
+@import './space/padding';
 
 .mol-lf {
   display: flex;

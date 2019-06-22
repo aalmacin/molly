@@ -1,5 +1,4 @@
-@import '../utils.scss';
-@import '../variables/direction.scss';
+@import '../../tokens';
 
 @mixin _generateClass($class, $cssClass, $spaceValue) {
   #{$class} {
@@ -19,9 +18,7 @@
   @return '#{$type}-#{$directionValue}';
 }
 
-@mixin generateSpaceClasses($prefix, $type, $tokensConfig) {
-  $spaceMap: map-get($tokensConfig, 'spaceMap');
-
+@mixin generateSpaceClasses($prefix, $type, $spaceMap) {
   @each $direction, $directionValue in $directionMap {
     @each $space, $spaceValue in $spaceMap {
       @if type-of($directionValue) == 'map' {

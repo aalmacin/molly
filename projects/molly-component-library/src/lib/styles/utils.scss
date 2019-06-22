@@ -1,3 +1,21 @@
-@function generateComponentLibraryClass($class) {
-  @return '.mol-#{$class}';
+@mixin generate($map, $prefix, $cssRule) {
+  @each $name, $val in $map {
+    .mol-#{$prefix}-#{$name} {
+      #{$cssRule}: $val;
+    }
+  }
+}
+
+@mixin generateWithBase($map, $prefix, $cssRule) {
+  @each $name, $val in $map {
+    $className: #{$prefix}-#{$name};
+
+    @if ($name==base) {
+      $className: #{$prefix};
+    }
+
+    .mol-#{$className} {
+      #{$cssRule}: $val;
+    }
+  }
 }
