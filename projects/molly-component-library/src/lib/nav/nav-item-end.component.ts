@@ -10,5 +10,5 @@ import { Component } from '@angular/core';
 })
 export class NavItemEndComponent {
   public classes =
-    'mol-nav-item mol-ft mol-l-nl mol-p-y-sm mol-m-r-md mol-c-tertiary-dark';
+    'mol-nav-item mol-tff-t mol-lp-y-sm mol-lm-r-md mol-sc-tertiary-vdark';
 }

@@ -16,5 +16,5 @@ import { Component } from '@angular/core';
 })
 export class NavComponent {
   public classes =
-    'mol-nav mol-b-secondary-vlight mol-bc-secondary-vlight mol-p-sm mol-m-b-sm';
+    'mol-nav mol-sb-primary-light mol-sbg-primary-light mol-lp-sm mol-lm-b-sm';
 }

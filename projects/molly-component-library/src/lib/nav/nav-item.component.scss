@@ -1,3 +1,9 @@
+@import '../styles/variables/theme';
+
+$primary: map-get($paletteMap, primary);
+$secondary: map-get($paletteMap, secondary);
+$tertiary: map-get($paletteMap, tertiary);
+
 :host {
   cursor: pointer;
 }
@@ -6,7 +12,7 @@
   font-family: inherit;
   color: inherit;
   text-decoration: inherit;
-  border-bottom: 1px solid #cce8ea;
+  border-bottom: 1px solid map-get($primary, 'light');
   padding-bottom: calc(0.5 * 1rem);
 
   &.active {
@@ -14,12 +20,12 @@
     padding-bottom: calc(0.5 * 1rem);
 
     &:hover {
-      border-bottom: 1px solid #6492a0;
+      border-bottom: 1px solid map-get($secondary, 'vlight');
     }
   }
 
   &:hover {
-    border-bottom: 1px solid #6492a0;
+    border-bottom: 1px solid map-get($secondary, 'vlight');
     padding-bottom: calc(0.5 * 1rem);
   }
 }

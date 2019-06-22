@@ -22,5 +22,5 @@ import { Component } from '@angular/core';
 })
 export class NavHeaderComponent {
   public classes =
-    'mol-nav-header mol-l-nl mol-fs-vl mol-fh mol-p-y-sm mol-m-r-md mol-c-tertiary-dark';
+    'mol-nav-header mol-tf-vl mol-tff-h mol-lp-y-sm mol-lm-r-md mol-sc-tertiary-vdark';
 }
