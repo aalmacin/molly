@@ -5,3 +5,50 @@ $spaceMap: (
   lg: 2rem,
   vl: 4rem
 );
+
+$flexAlignItemsMap: (
+  s: flex-start,
+  e: flex-end,
+  c: center,
+  b: baseline,
+  str: stretch
+);
+
+$flexAlignContentMap: (
+  s: flex-start,
+  e: flex-end,
+  c: center,
+  sb: space-between,
+  sa: space-around,
+  str: stretch
+);
+
+$flexJustifyContentMap: (
+  s: flex-start,
+  e: flex-end,
+  c: center,
+  sb: space-between,
+  sa: space-around
+);
+
+$flexMap: (
+  s: flex-start,
+  e: flex-end,
+  c: center,
+  b: baseline,
+  str: stretch
+);
+
+$flexOrderMap: (
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  7: 7,
+  8: 8,
+  9: 9,
+  last: 99999
+);

@@ -1,11 +1,8 @@
 @import './space.scss';
 @import '../../tokens.scss';
 
-@mixin generatePaddingClasses($tokensConfig) {
-  @include generateSpaceClasses('p', 'padding', $tokensConfig);
-  @include generateSpaceClasses('mol-p', 'padding', $tokensConfig);
+@include generateSpaceClasses('mol-lp', 'padding');
 
-  .mol-lp-n {
-    padding: 0;
-  }
+.mol-lp-n {
+  padding: 0;
 }

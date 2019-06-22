@@ -8,3 +8,36 @@
 .mol-lf {
   display: flex;
 }
+
+.mol-lf-a {
+  flex: 1 1 auto;
+  min-width: 0; /* 1 */
+  min-height: 0; /* 1 */
+}
+
+.mol-lf-fw {
+  flex-wrap: wrap;
+}
+
+.mol-lf-fw-r {
+  flex-wrap: wrap-reverse;
+}
+
+.mol-lf-fd-r {
+  flex-direction: row;
+}
+
+.mol-lf-fd-c {
+  flex-direction: column;
+}
+
+@include generate($flexAlignItemsMap, lf-ai, align-items);
+@include generate($flexAlignItemsMap, lf-as, align-self);
+@include generate($flexAlignContentMap, lf-ac, align-content);
+@include generate($flexJustifyContentMap, lf-jc, justify-content);
+
+@include generate($flexOrderMap, lf-fo, order);
+
+.mol-lf-fn {
+  flex: none;
+}

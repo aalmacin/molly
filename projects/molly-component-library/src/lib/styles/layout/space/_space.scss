@@ -18,7 +18,7 @@
   @return '#{$type}-#{$directionValue}';
 }
 
-@mixin generateSpaceClasses($prefix, $type, $spaceMap) {
+@mixin generateSpaceClasses($prefix, $type) {
   @each $direction, $directionValue in $directionMap {
     @each $space, $spaceValue in $spaceMap {
       @if type-of($directionValue) == 'map' {
