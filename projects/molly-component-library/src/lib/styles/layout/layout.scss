@@ -63,3 +63,6 @@
 @include generate($displayMap, ld, display);
 
 @include generate($widthMap, lw, width);
+@include generate($maxWidthMap, lmw, max-width);
+
+@include generate($heightMap, lh, height);

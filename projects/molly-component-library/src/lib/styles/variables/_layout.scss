@@ -90,3 +90,34 @@ $widthMap: (
   tt: calc(100% / 1.5),
   a: auto
 );
+
+$maxWidthMap: (
+  1: 1rem,
+  2: 2rem,
+  3: 4rem,
+  4: 8rem,
+  5: 16rem,
+  6: 32rem,
+  7: 48rem,
+  8: 64rem,
+  9: 96rem,
+  100: 100%
+);
+
+$heightMap: (
+  h1: 1rem,
+  h2: 2rem,
+  h3: 4rem,
+  h4: 8rem,
+  h5: 16rem,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  vh25: 25vh,
+  vh50: 50vh,
+  vh75: 75vh,
+  vh100: 100vh,
+  a: auto,
+  i: inherit
+);
