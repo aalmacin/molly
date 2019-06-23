@@ -39,7 +39,7 @@
 .mol-c-btn-default {
   color: getColor(black, base);
   background-color: getColor(white, base);
-  border: none;
+  border: 1px solid getColor(black, base);
   cursor: pointer;
 
   &:hover {
