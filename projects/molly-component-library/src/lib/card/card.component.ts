@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   template: `
     <div class="mol-card mol-tf-lg">
       <div
-        class="mol-sb-secondary-light-x mol-sb-secondary-light-t mol-sbg-secondary-light mol-sc-white mol-tta-c mol-lp-sm mol-tff-h"
+        class="mol-sb-secondary-light-x mol-sb-secondary-light-t mol-sbg-secondary-vdark mol-sc-white mol-tta-c mol-lp-sm mol-tff-h"
       >
         {{ heading }}
       </div>
