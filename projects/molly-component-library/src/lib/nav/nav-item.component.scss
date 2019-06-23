@@ -12,12 +12,12 @@ $tertiary: map-get($paletteMap, tertiary);
   font-family: inherit;
   color: inherit;
   text-decoration: inherit;
-  border-bottom: 1px solid map-get($primary, 'light');
-  padding-bottom: calc(0.5 * 1rem);
+  border-bottom: 1px solid map-get($tertiary, 'vdark');
+  padding-bottom: 3px;
 
   &.active {
-    border-bottom: 1px solid #35281c;
-    padding-bottom: calc(0.5 * 1rem);
+    border-bottom: 1px solid map-get($secondary, vlight);
+    padding-bottom: 3px;
 
     &:hover {
       border-bottom: 1px solid map-get($secondary, 'vlight');
