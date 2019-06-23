@@ -3,9 +3,11 @@ import {
   ButtonDirective,
   CardComponent,
   FlashCardComponent,
+  ImageJumbotronComponent,
   MolButtonModule,
   MolCardModule,
   MolFlashCardModule,
+  MolJumbotronModule,
   MolNavModule,
   NavComponent,
   NavHeaderComponent,
@@ -20,8 +22,15 @@ import {
     CardComponent,
     NavComponent,
     NavItemComponent,
-    NavHeaderComponent
+    NavHeaderComponent,
+    ImageJumbotronComponent
   ],
-  imports: [MolButtonModule, MolCardModule, MolFlashCardModule, MolNavModule]
+  imports: [
+    MolButtonModule,
+    MolCardModule,
+    MolFlashCardModule,
+    MolNavModule,
+    MolJumbotronModule
+  ]
 })
 export class MollyModule {}
