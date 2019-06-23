@@ -26,6 +26,6 @@ $tertiary: map-get($paletteMap, tertiary);
 
   &:hover {
     border-bottom: 1px solid map-get($secondary, 'vlight');
-    padding-bottom: calc(0.5 * 1rem);
+    padding-bottom: 3px;
   }
 }
