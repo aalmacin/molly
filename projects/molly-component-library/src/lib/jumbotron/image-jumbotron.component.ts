@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
         textLeft ? 'mol-lf-fd-r' : 'mol-lf-fd-rr'
       }} mol-lf mol-sbg-secondary-vlight"
     >
-      <div class="mol-lf mol-lf-fd-c mol-lp-lg mol-lw-60">
+      <div class="mol-lf mol-lf-jc-sb mol-lf-fd-c mol-lp-lg mol-lw-60">
         <h3>{{ heading }}</h3>
         <p>
           {{ text }}
