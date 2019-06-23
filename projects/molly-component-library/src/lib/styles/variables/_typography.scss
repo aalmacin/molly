@@ -8,6 +8,10 @@ $font-sizes: (
   sm: 0.875rem
 );
 
+@function getFontSize($scale) {
+  @return map-get($font-sizes, $scale);
+}
+
 $measures: (
   n: 25em,
   base: 40em,

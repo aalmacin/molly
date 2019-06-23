@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { ButtonComponent } from './button.component';
+import { ButtonDirective } from './button.directive';
 
 @NgModule({
-  declarations: [ButtonComponent],
-  exports: [ButtonComponent],
+  declarations: [ButtonDirective],
+  exports: [ButtonDirective],
   imports: []
 })
 export class MolButtonModule {}

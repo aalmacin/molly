@@ -1,12 +1,12 @@
 import { radios, select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/angular';
-import { ButtonComponent, ButtonSize, ButtonType } from '../src/public-api';
+import { ButtonDirective, ButtonSize, ButtonType } from '../src/public-api';
 
 const stories = storiesOf('Raidrin|Button', module);
 
 stories.add('Default', () => ({
   moduleMetadata: {
-    declarations: [ButtonComponent]
+    declarations: [ButtonDirective]
   },
   props: {
     size: radios(
@@ -37,7 +37,7 @@ stories.add('Default', () => ({
 
 stories.add('With Link', () => ({
   moduleMetadata: {
-    declarations: [ButtonComponent]
+    declarations: [ButtonDirective]
   },
   props: {
     size: radios(

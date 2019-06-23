@@ -33,3 +33,7 @@ $paletteMap: (
     base: #111111
   )
 );
+
+@function getColor($type, $intensity) {
+  @return map-get(map-get($paletteMap, $type), $intensity);
+}

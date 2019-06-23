@@ -6,6 +6,10 @@ $spaceMap: (
   vl: 4rem
 );
 
+@function getSpaceSize($scale) {
+  @return map-get($spaceMap, $scale);
+}
+
 $flexAlignItemsMap: (
   s: flex-start,
   e: flex-end,

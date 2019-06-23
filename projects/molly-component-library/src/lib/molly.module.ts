@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import {
-  ButtonComponent,
+  ButtonDirective,
   CardComponent,
   FlashCardComponent,
   MolButtonModule,
@@ -15,7 +15,7 @@ import {
 @NgModule({
   declarations: [],
   exports: [
-    ButtonComponent,
+    ButtonDirective,
     FlashCardComponent,
     CardComponent,
     NavComponent,

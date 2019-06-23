@@ -1,0 +1,64 @@
+@import '../variables/theme';
+@import '../variables/typography';
+@import '../variables/layout';
+
+.mol-c-btn-primary {
+  color: getColor(white, base);
+  background-color: getColor(primary, base);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: getColor(primary, light);
+  }
+}
+
+.mol-c-btn-secondary {
+  color: getColor(white, base);
+  background-color: getColor(secondary, base);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: getColor(secondary, vdark);
+    background-color: getColor(secondary, vlight);
+  }
+}
+
+.mol-c-btn-tertiary {
+  color: getColor(white, base);
+  background-color: getColor(tertiary, base);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: getColor(tertiary, light);
+  }
+}
+
+.mol-c-btn-default {
+  color: getColor(black, base);
+  background-color: getColor(white, base);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: getColor(white, base);
+    background-color: getColor(black, base);
+  }
+}
+
+.mol-c-btn-size-sm {
+  font-size: getFontSize(sm);
+  padding: getSpaceSize(sm);
+}
+
+.mol-c-btn-size-md {
+  font-size: getFontSize(md);
+  padding: getSpaceSize(md);
+}
+
+.mol-c-btn-size-lg {
+  font-size: getFontSize(vl);
+  padding: getSpaceSize(md) getSpaceSize(lg);
+}
