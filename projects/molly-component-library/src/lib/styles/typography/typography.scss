@@ -36,10 +36,3 @@
 .mol-tff-t {
   @include text-font();
 }
-
-body,
-p,
-a {
-  text-decoration: none;
-  color: #111111;
-}

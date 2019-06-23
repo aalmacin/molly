@@ -3,3 +3,23 @@
 @import './theming/theme.scss';
 
 @import './components/button';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include header-font();
+}
+
+body {
+  @include text-font();
+}
+
+body,
+p,
+a {
+  text-decoration: none;
+  color: #111111;
+}
