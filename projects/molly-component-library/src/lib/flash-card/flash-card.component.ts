@@ -38,7 +38,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
         molBtn
         class="mol-flash-card-show-answer mol-lw-100"
         type="secondary"
-        size="medium"
+        size="lg"
         (click)="flip()"
       >
         Show Answer
