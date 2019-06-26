@@ -5,7 +5,14 @@ import { CardComponent } from '../src/public-api';
 const stories = storiesOf('Raidrin|Card', module);
 
 stories.add('Default', () => ({
-  component: CardComponent,
+  moduleMetadata: {
+    declarations: [CardComponent]
+  },
+  template: `
+    <mol-card [heading]="heading">
+      {{ content }}
+    </mol-card>
+  `,
   props: {
     content: text(
       'content',

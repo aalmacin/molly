@@ -8,11 +8,18 @@ import { BehaviorSubject, Observable } from 'rxjs';
     <div
       class="mol-flash-card mol-tta-c mol-lf mol-lf-fd-c mol-lf-jc-c mol-lf-fw"
     >
-      <mol-card
-        heading="{{ topic }}"
-        content="{{ (flipped$ | async) ? back : front }}"
-        class="mol-flash-card-container"
-      ></mol-card>
+      <mol-card heading="{{ topic }}" class="mol-flash-card-container">
+        <div *ngIf="!(flipped$ | async); else flashCardBack">
+          {{ front }}
+        </div>
+
+        <ng-template #flashCardBack>
+          <p class="mol-tf-sm mol-tfw-b">{{ front }}</p>
+          <p>
+            {{ back }}
+          </p>
+        </ng-template>
+      </mol-card>
 
       <div class="mol-flash-card-difficulty-group" *ngIf="flipped$ | async">
         <button

@@ -13,7 +13,7 @@ import { Component, Input } from '@angular/core';
       <div
         class="mol-sb-secondary-light-x mol-sb-secondary-light-b mol-sbg-white mol-tta-c mol-lp-lg"
       >
-        {{ content }}
+        <ng-content></ng-content>
       </div>
     </div>
   `
@@ -21,7 +21,4 @@ import { Component, Input } from '@angular/core';
 export class CardComponent {
   @Input()
   public heading = '';
-
-  @Input()
-  public content = '';
 }
