@@ -5,34 +5,37 @@
 .mol-c-btn-primary {
   color: getColor(white, base);
   background-color: getColor(primary, base);
-  border: none;
+  border: 1px solid getColor(primary, light);
   cursor: pointer;
 
   &:hover {
     background-color: getColor(primary, light);
+    border: 1px solid getColor(primary, dark);
   }
 }
 
 .mol-c-btn-secondary {
   color: getColor(white, base);
   background-color: getColor(secondary, base);
-  border: none;
+  border: 1px solid getColor(secondary, light);
   cursor: pointer;
 
   &:hover {
     color: getColor(secondary, vdark);
     background-color: getColor(secondary, vlight);
+    border: 1px solid getColor(secondary, dark);
   }
 }
 
 .mol-c-btn-tertiary {
   color: getColor(white, base);
   background-color: getColor(tertiary, base);
-  border: none;
+  border: 1px solid getColor(tertiary, light);
   cursor: pointer;
 
   &:hover {
     background-color: getColor(tertiary, light);
+    border: 1px solid getColor(tertiary, dark);
   }
 }
 
