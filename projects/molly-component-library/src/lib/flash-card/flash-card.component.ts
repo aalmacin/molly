@@ -8,7 +8,10 @@ import { BehaviorSubject, Observable } from 'rxjs';
     <div
       class="mol-flash-card mol-tta-c mol-lf mol-lf-fd-c mol-lf-jc-c mol-lf-fw"
     >
-      <mol-card heading="{{ topic }}" class="mol-flash-card-container">
+      <mol-card
+        heading="{{ topic }}"
+        class="mol-flash-card-container mol-sb-n-b"
+      >
         <div *ngIf="!(flipped$ | async); else flashCardBack">
           {{ front }}
         </div>

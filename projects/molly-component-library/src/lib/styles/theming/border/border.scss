@@ -17,7 +17,7 @@
     $className: '#{$className}-#{$thickness}';
   }
 
-  @if ($accent == 'base') {
+  @if ($accent== 'base') {
     $className: '#{$className}-#{$color}';
   } @else {
     $className: '#{$className}-#{$color}-#{$accent}';
@@ -73,5 +73,31 @@
         }
       }
     }
+  }
+
+  .mol-sb-n-t {
+    border-top: none;
+  }
+
+  .mol-sb-n-b {
+    border-bottom: none;
+  }
+
+  .mol-sb-n-l {
+    border-left: none;
+  }
+
+  .lol-sb-n-r {
+    border-right: none;
+  }
+
+  .lol-sb-n-x {
+    border-left: none;
+    border-right: none;
+  }
+
+  .lol-sb-n-y {
+    border-top: none;
+    border-bottom: none;
   }
 }
