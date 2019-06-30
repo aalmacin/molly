@@ -15,5 +15,5 @@ import { Component } from '@angular/core';
   `
 })
 export class NavComponent {
-  public classes = 'mol-nav mol-sbg-primary-vdark mol-lp-vs mol-lm-b-sm';
+  public classes = 'mol-nav mol-sbg-primary-vdark mol-lp-vs';
 }
