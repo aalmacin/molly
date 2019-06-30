@@ -18,7 +18,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
         <ng-template #flashCardBack>
           <p class="mol-tf-sm mol-tfw-b">{{ front }}</p>
-          <p>
+          <p class="back">
             {{ back }}
           </p>
         </ng-template>
