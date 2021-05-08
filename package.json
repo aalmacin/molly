@@ -76,7 +76,7 @@
     "jest": "^24.7.1",
     "jest-preset-angular": "^7.1.0",
     "mkdirp": "^0.5.1",
-    "ng-packagr": "^4.2.0",
+    "ng-packagr": "^10.1.1",
     "prettier": "^1.18.2",
     "require-context.macro": "^1.0.4",
     "sass": "^1.20.1",
